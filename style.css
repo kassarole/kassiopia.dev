@@ -7,7 +7,7 @@ these tended to confuse some people, so I only kept
 the images as variables */
 
 :root {
-    --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
+    --header-image: url('images/header.jpg');
     --body-bg-image: url('https://sadhost.neocities.org/images/tiles/pink093.jpg');
 
     /* colors */
@@ -102,7 +102,7 @@ text-decoration:none; */
     /* if you want to put images IN the header, 
 you can add them directly to the <div id="header"></div> element! */
     background-image: var(--header-image);
-    background-size: 100%;
+    background-size: 50%;
 }
 
 /* navigation section!! */
@@ -149,7 +149,7 @@ if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
 aside {
     background-color: #000000;
-    width: 200px;
+    width: 250px;
     padding: 20px;
     font-size: smaller;
     /* this makes the sidebar text slightly smaller */
@@ -220,7 +220,6 @@ strong {
     font-size: smaller;
     background-color: #000000;
 }
-
 
 /* BELOW THIS POINT IS MEDIA QUERY */
 
