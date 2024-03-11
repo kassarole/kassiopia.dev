@@ -212,6 +212,17 @@ strong {
     padding: 10px;
 }
 
+.table-image {
+    max-width: 60%;
+    max-height: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+figcaption {
+    text-align: center;
+}
+
 /* CSS for extras */
 
 #topBar {
