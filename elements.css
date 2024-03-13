@@ -4,7 +4,7 @@
 .site-box {
     text-align: center;
     background-image: url(https://kassiopia.nekoweb.org/images/bg.jpg); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     color: #b08271;
     font-size: 12px;
 }
