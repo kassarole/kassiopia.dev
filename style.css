@@ -33,9 +33,13 @@ body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     background-color: #000000;
-    background-size: 65px;
     color: #fceaff;
     background-image: var(--body-bg-image);
+}
+
+iframe {
+    max-height: 150px;
+    max-width: 200px;
 }
 
 * {
@@ -137,6 +141,10 @@ h1 {
 
 strong {
     color: #6e2525;
+}
+
+.centered {
+    text-align: center;
 }
 
 .box {
