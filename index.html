@@ -7,7 +7,22 @@
     <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
 </head>
 <body>
+    <script>
+        const username = "kassiopia"; // Put your Nekoweb username here
+        const getStats = async () => {
+            const request = await fetch(`https://nekoweb.org/api/site/info/${username}`);
+            const json = await request.json();
 
+            const updated = new Date(json.updated_at).toLocaleDateString(); // Formats Last Updated text
+            const created = new Date(json.created_at).toLocaleDateString(); // Formats Creation Date text
+
+            document.getElementById("created").innerHTML = `<em>Created</em>: ${created}`;
+            document.getElementById("updated").innerHTML = `<em>Updated</em>: ${updated}`;
+            document.getElementById("visitors").innerHTML = `<em>Visits</em>: ${json.views}`;
+            document.getElementById("followers").innerHTML = `<em>Followers</em>: ${json.followers}`;
+        };
+        getStats();
+    </script>
     <div id="container">
         <div id="headerArea">
             <div id="header"></div>
@@ -26,7 +41,7 @@
             <aside id="leftSidebar" style="margin-right: 10px;">
                 <h2 class="centered">Updates</h2>
                 <div class="box">
-                    <p>Site last updated: 13/3/24</p>
+                    <p id="updated">Updated</p>
                     <ul style="padding-left:10px;">
                         <li>First verion of the site is up and live :3</li>
                     </ul>
@@ -54,12 +69,11 @@
                 </div>
                 <p></p>
                 <div class="box">
-                    <h2 class="centered">Visitor Counter</h2>
+                    <h2 class="centered">Stats</h2>
                     <p class="centered">Please disable adblock to see</p>
-                    <div class="centered">
-                        <a href='https://www.free-counters.org/'>free Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=f01fea65b4c066d53dc9f0721bf8d6671386a360'></script>
-                        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1159154/t/2"></script>
-                    </div>
+                    <p id="created">Created</p>
+                    <p id="visitors">Visitors</p>
+                    <p id="followers">Followers</p>
                 </div>
             </aside>
             <main>
