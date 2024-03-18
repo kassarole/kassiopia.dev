@@ -9,11 +9,11 @@
     font-size: 12px;
 }
 .site-box > a > p {
-    color: var(--darkbrown);
+    color: red;
     font-weight: bold;
 }
 .site-box > a > span {
-    color: var(--darkbrown);
+    color: red;
 }
 .site-box .sitefeature {
     opacity: 0;
