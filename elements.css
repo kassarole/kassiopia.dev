@@ -15,3 +15,7 @@
 .site-box > a > span {
     color: var(--darkbrown);
 }
+.site-box .sitefeature {
+    opacity: 0;
+    height: 62px;
+}
