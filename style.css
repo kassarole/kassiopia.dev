@@ -150,6 +150,7 @@ strong {
 .box {
     background-color: #000000;
     border: 1px solid #6e2525;
+    border-radius: 25px;
     padding: 10px;
 }
 
