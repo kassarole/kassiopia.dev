@@ -37,23 +37,26 @@
 
             if(!isPlaying) {
                 // Trigger if a song isn't playing
-                return;
+                document.getElementById("listening").innerHTML = `
+                <div id="trackinfo">
+                <p id="trackstatus">No song playing</p>
+                </div>
+                `
             } else {
                 // Trigger if a song is playing
+                document.getElementById("listening").innerHTML = `
+                <img src="${json.track.image[1]['#text']}">
+                <div id="trackInfo">
+                <h3 id="trackName">${json.track.name}</h3>
+                <p id="artistName">${json.track.artist['#text']}</p>
+                </div>
+                `
             }
 
             // Values:
             // COVER IMAGE: json.track.image[1]['#text']
             // TITLE: json.track.name
             // ARTIST: json.track.artist['#text']
-
-            document.getElementById("listening").innerHTML = `
-            <img src="${json.track.image[1]['#text']}">
-            <div id="trackInfo">
-            <h3 id="trackName">${json.track.name}</h3>
-            <p id="artistName">${json.track.artist['#text']}</p>
-            </div>
-            `
         };
 
         getTrack();
@@ -85,6 +88,9 @@
                     <p></p>
                 </div>
                 <div class="box" id="listening">
+                    <div id="trackinfo">
+                        <p id="trackstatus">Loading track status</p>
+                    </div>
                 </div>
                 <p></p>
                 <div class="box">
