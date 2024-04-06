@@ -1,10 +1,13 @@
 let currentIndex = 0;
-        const images = document.querySelectorAll('.gallery img');
+        const images = document.querySelectorAll('.table-image');
         const totalImages = images.length;
+        console.log(document.querySelectorAll('.table-image'))
 
         // Open the lightbox
         function openLightbox(event) {
             if (event.target.tagName === 'IMG') {
+                console.log(event.target)
+                console.log(Array.from(images).indexOf(event.target))
                 const clickedIndex = Array.from(images).indexOf(event.target);
                 currentIndex = clickedIndex;
                 updateLightboxImage();
@@ -36,42 +39,4 @@ let currentIndex = 0;
             // Update the main lightbox image
             lightboxImg.src = images[currentIndex].src;
 
-            // Clear existing thumbnails
-            thumbnailContainer.innerHTML = '';
-
-            // Add new thumbnails
-            images.forEach((image, index) => {
-                const thumbnail = document.createElement('img');
-                thumbnail.src = image.src;
-                thumbnail.alt = `Thumbnail ${index + 1}`;
-                thumbnail.classList.add('thumbnail');
-                thumbnail.addEventListener('click', () => updateMainImage(index));
-                thumbnailContainer.appendChild(thumbnail);
-            });
-
-            // Highlight the current thumbnail
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            thumbnails[currentIndex].classList.add('active-thumbnail');
-        }
-
-        // Update the main lightbox image when a thumbnail is clicked
-        function updateMainImage(index) {
-            currentIndex = index;
-            updateLightboxImage();
-        }
-
-        // Add initial thumbnails
-        updateLightboxImage();
-
-
-        // To add keyboard navigation (left/right arrow keys)
-        document.addEventListener('keydown', function (e) {
-            if (document.getElementById('lightbox').style.display === 'flex') {
-                if (e.key === 'ArrowLeft') {
-                    changeImage(-1);
-                } else if (e.key === 'ArrowRight') {
-                    changeImage(1);
-                }
-            }
-        });
-
+        };
