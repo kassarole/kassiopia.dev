@@ -1,13 +1,10 @@
 let currentIndex = 0;
         const images = document.querySelectorAll('.table-image');
         const totalImages = images.length;
-        console.log(document.querySelectorAll('.table-image'))
 
         // Open the lightbox
         function openLightbox(event) {
             if (event.target.tagName === 'IMG') {
-                console.log(event.target)
-                console.log(Array.from(images).indexOf(event.target))
                 const clickedIndex = Array.from(images).indexOf(event.target);
                 currentIndex = clickedIndex;
                 updateLightboxImage();
