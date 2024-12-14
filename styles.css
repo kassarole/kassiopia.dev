@@ -13,7 +13,7 @@ body {
     background-color: rgb(27, 27, 27);
     align-items: center;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600apx) {
 .center-box {
     background-color: #303030;
     margin-top: 10px;
