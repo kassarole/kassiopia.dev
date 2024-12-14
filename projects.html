@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        ul {
+            list-style-position: outside; /* Ensures bullets are outside the text block */
+            padding-left: 40px; /* Provides consistent space for alignment */
+        }
+        li {
+            margin-bottom: 10px; /* Adds spacing between list items */
+        }
+        h3 {
+            display: inline; /* Ensures headings remain inline for proper alignment */
+            font-size: 1em; /* Adjust font size to match regular text */
+            font-weight: bold;
+        }
+        p {
+            margin: 0; /* Removes extra margins for better alignment */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-tabs">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="images.html">Photos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="center-box2">
+        <main>
+            <h2>Projects</h2>
+            <p>From time to time I like to release the utilities I've written. These can be found below:</p>
+            <ul>
+                <li>
+                    <a href="https://git.basedzone.xyz/kass/music-organizer">
+                        <h3>Music Organizer:</h3>
+                    </a>This is a python script for automatically identifying and organizing music downloaded with <a href="https://github.com/spotDL/spotify-downloader">SpotDL</a>.
+                </li>
+                <li>
+                    <a href="https://git.basedzone.xyz/kass/ebook-downloader">
+                        <h3>eBook Downloader:</h3>
+                    </a>This is a python script for searching for and then downloading books from libgen. It has a simple web UI and a CLI version.
+                </li>
+                <li>
+                    <a href="https://git.basedzone.xyz/kass/MVIMG_Carving">
+                        <h3>MVIMG Carving:</h3>
+                    </a>This is a python script for extracting the video segments from Android Motion Videos (Android version of Live Photos).
+                </li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
