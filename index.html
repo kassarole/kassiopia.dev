@@ -1,135 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Kassiopia's Space | Home</title>
-    <link href="style.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        const username = "kassiopia"; // Put your Nekoweb username here
-        const getStats = async () => {
-            const request = await fetch(`https://nekoweb.org/api/site/info/${username}`);
-            const json = await request.json();
-
-            const updated = new Date(json.updated_at).toLocaleDateString(); // Formats Last Updated text
-            const created = new Date(json.created_at).toLocaleDateString(); // Formats Creation Date text
-
-            document.getElementById("created").innerHTML = `<strong>Created:</strong> ${created}`;
-            document.getElementById("updated").innerHTML = `<strong>Updated:</strong> ${updated}`;
-            document.getElementById("visitors").innerHTML = `<strong>Visits:</strong> ${json.views}`;
-            document.getElementById("followers").innerHTML = `<strong>Followers:</strong> ${json.followers}`;
-        };
-        getStats();
-    </script>
-    <script>
-        // this script is under the MIT license (https://max.nekoweb.org/resources/license.txt)          
-        const USERNAME = "kevroded"; // Put your LastFM username here
-        const BASE_URL = `https://lastfm-last-played.biancarosa.com.br/${USERNAME}/latest-song`;
-
-        const getTrack = async () => {
-            const request = await fetch(BASE_URL);
-            const json = await request.json();
-            let status
-
-            let isPlaying = json.track['@attr']?.nowplaying || false;
-
-            if(!isPlaying) {
-                // Trigger if a song isn't playing
-                document.getElementById("listening").innerHTML = `
-                <div id="trackinfo">
-                <p id="trackstatus">No song playing</p>
-                </div>
-                `
-            } else {
-                // Trigger if a song is playing
-                document.getElementById("listening").innerHTML = `
-                <img src="${json.track.image[1]['#text']}">
-                <div id="trackInfo">
-                <h3 id="trackName">${json.track.name}</h3>
-                <p id="artistName">${json.track.artist['#text']}</p>
-                </div>
-                `
-            }
-
-            // Values:
-            // COVER IMAGE: json.track.image[1]['#text']
-            // TITLE: json.track.name
-            // ARTIST: json.track.artist['#text']
-        };
-
-        getTrack();
-        setInterval(() => { getTrack(); }, 10000);
-    </script>
-    <div id="container">
-        <div id="headerArea">
-            <div id="header"></div>
-            <nav id="navbar" style="margin-bottom: 10px;">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="Projects.html">Projects</a></li>
-                    <li><a href="Logs.html">Logs</a></li>
-                    <li><a href="Photos.html">Photos</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div id="flex">
-            <aside id="leftSidebar" style="margin-right: 10px;">
-                <div class="box">
-                    <p id="updated"><strong>Updated</strong></p>
-                    <ul style="padding-left:10px;">
-                        <li>New Logpost</li>
-                        <li>New photos uploaded</li>
-                    </ul>
-                </div>
-                <div>
-                    <p></p>
-                </div>
-                <div class="box" id="listening">
-                    <div id="trackinfo">
-                        <p id="trackstatus">Loading track status</p>
-                    </div>
-                </div>
-                <p></p>
-                <div class="box">
-                    <table>
-                        <tr>
-                            <td><img src="https://cyber.dabamos.de/88x31/asexuals_now.gif" style="float:left; margin-right:10px;"></td>
-                            <td><img src="https://cyber.dabamos.de/88x31/nonbinary.gif" style="float:left;"></td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://cyber.dabamos.de/88x31/tyg.gif" style="float:left; margin-right:10px;"></td>
-                            <td><img src="https://cyber.dabamos.de/88x31/ubuntu-88x31.gif" style="float:left;"></td>
-                        </tr>
-                    </table>
-                </div>
-                <p></p>
-                <div class="box">
-                    <h2 class="centered">Stats</h2>
-                    <p id="created"><strong>Created</strong></p>
-                    <p id="visitors"><strong>Visitors</strong></p>
-                    <p id="followers"><strong>Followers</strong></p>
-                </div>
-                <p></p>
-                <div class="box">
-                    <h2 class="centered">Credits</h2>
-                    <ul style="padding-left:10px;">
-                        <li><a href="https://max.nekoweb.org/resources/lastfm-widget/">LastFM Widget by Max</a></li>
-                        <li><a href="https://max.nekoweb.org/resources/nekoweb-stats/">Nekoweb Stats by Max</a></li>
-                    </ul>
-                </div>
-            </aside>
-            <main>
-                <h1>Welcome to my site!</h1>
-                <p>I began work on this site as a project to mess with and have fun as well as to post some shorter logs and photos I take.</p>
-                <p>In the future I hope to make this a more distinct and interesting place but for now enjoy.</p>
-            </main>
-            
-        </div>
-        <footer id="footer" style="margin-top: 10px;">Generated with <a href="https://goblin-heart.net/sadgrl/projects/layout-builder/">Sadgrl's Layout Builder</a></footer>
+    <header>
+        <nav>
+            <ul class="nav-tabs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="images.html">Photos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="center-box">
+        <h2>Kassiopia's Space</h2>
+        <p>I began work on this site as a project to mess with and have fun as well as to post some of my projects and photos I take.</p>
+        <p>In the future I hope to make this a more distinct and interesting place but for now enjoy.</p>
     </div>
 </body>
 </html>
