@@ -16,34 +16,35 @@ body {
     background-blend-mode: darken;
     align-items: center;
 }
+
 @media only screen and (max-width: 500px) {
     .center-box {
-        background-color: #303030;
+        background-color: rgba(48, 48, 48, 0.75);
         margin-top: 10px;
         max-width: 100%;
         max-height: 100%;
         padding: 10px;
         border-radius: 10px;
-        color: white
+        color: white;
     }
 }
 @media only screen and (min-width: 500px) {
     .center-box {
-        background-color: #303030;
+        background-color: rgba(48, 48, 48, 0.75);
         margin-top: 10px;
         padding: 10px;
         max-width: 600px;
         min-width: 600px;
         border-radius: 10px;
-        color: white
+        color: white;
     }
 }
 .center-box2 {
-    background-color: #303030;
+    background-color: rgba(48, 48, 48, 0.75);
     margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
-    color: white
+    color: white;
 }
 
 .box {
