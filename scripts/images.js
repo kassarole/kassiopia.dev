@@ -1,4 +1,6 @@
 const imageFilenames = [
+    "22-2.png",
+    "22-1.png",
     "21-4.png",
     "21-3.png",
     "21-2.png",
