@@ -3,7 +3,7 @@ const folders = [
         name: "Arizona",
         path: "images/Upload/Arizona",
         images: [
-            "4-1.jpg","4-2.hpg","4-3.jpg","5-1.jpg","5-2.jpg","5-3.jpg","6-1.jpg","6-2.jpg","6-3.jpg","7-1.jpg","7-2.jpg","7-3.jpg","8-1.jpg","8-2.jpg","8-3.jpg"
+            "4-1.jpg","4-2.jpg","4-3.jpg","5-1.jpg","5-2.jpg","5-3.jpg","6-1.jpg","6-2.jpg","6-3.jpg","7-1.jpg","7-2.jpg","7-3.jpg","8-1.jpg","8-2.jpg","8-3.jpg"
             // Add other images for Folder 1 here
         ]
     },
