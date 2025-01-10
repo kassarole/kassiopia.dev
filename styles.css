@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     background-image: url("images/static-tv-static.gif");
     background-repeat: repeat;
-    background-color: rgba(27, 27, 27, 0.94);
+    background-color: rgba(27, 27, 27, 0.90);
     background-blend-mode: darken;
     align-items: center;
 }
