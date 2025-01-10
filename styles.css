@@ -13,7 +13,7 @@ body {
     background-image: url("images/static-tv-static.gif");
     background-repeat: repeat;
     background-color: rgba(27, 27, 27, 0.90);
-    background-blend-mode: darken;
+    background-blend-mode: overlay;
     align-items: center;
 }
 
