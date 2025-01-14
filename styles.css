@@ -129,45 +129,42 @@ header {
 a {
     color: green;
 }
-/* Folder navigation in a single horizontal row */
 #folder-navigation {
-    display: flex;                 /* Use flexbox to arrange items horizontally */
-    overflow-x: auto;              /* Allows horizontal scrolling if items overflow */
-    gap: 20px;                     /* Space between folder items */
+    display: flex;                 
+    overflow-x: auto;              
+    gap: 20px;                     
     margin: 20px 0;
-    white-space: nowrap;           /* Prevent wrapping of items */
+    white-space: nowrap;           
 }
 
 #folder-navigation a {
-    display: block;                /* Make each folder a block element */
-    font-size: 18px;               /* Larger font size for readability */
-    font-weight: bold;             /* Bold text */
+    display: block;                
+    font-size: 18px;               
+    font-weight: bold;             
     padding: 10px;
-    text-align: center;            /* Center the text inside the folder */
-    color: #333;                   /* Text color */
-    text-decoration: none;         /* Remove underline */
-    background-color: #f8f8f8;     /* Light background color for each folder */
-    border: 2px solid #ddd;        /* Border around the folder */
-    border-radius: 8px;            /* Rounded corners */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-    box-sizing: border-box;        /* Prevent padding from affecting width/height */
+    text-align: center;           
+    color: #333;                   
+    text-decoration: none;         
+    background-color: #f8f8f8;     
+    border: 2px solid #ddd;       
+    border-radius: 8px;            
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    box-sizing: border-box;        
 }
 
 #folder-navigation a:hover {
-    transform: scale(1.05);         /* Slightly enlarge folder on hover */
-    background-color: #007bff;      /* Change background on hover */
-    color: white;                   /* Change text color on hover */
+    transform: scale(1.05);         
+    background-color: #007bff;      
+    color: white;                   
 }
 
-/* Optional: Add shadow effect on hover */
 #folder-navigation a:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Add subtle shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
 }
 
-/* Optional: Adjust layout for smaller screens */
 @media (max-width: 600px) {
     #folder-navigation a {
-        font-size: 16px;  /* Slightly smaller font size on smaller screens */
+        font-size: 16px;  
         padding: 8px;
     }
 }
