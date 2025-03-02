@@ -11,7 +11,7 @@ const folders = [
         name: "Colorado",
         path: "images/Upload/Colorado",
         images: [
-            "16-1.webp","16-2.webp","16-3.webp","16-4.webp","16-5.webp","16-6.webp","16-7.webp","16-8.webp","16-9.webp","17-1.webp","17-2.webp","17-3.webp","17-4.webp","17-5.webp","17-6.webp","17-7.webp"
+            "16-1.webp","16-2.webp","16-3.webp","16-4.webp","16-5.webp","16-6.webp","16-7.webp","16-8.webp","16-9.webp","17-1.webp","17-2.webp","17-3.webp","17-4.webp","17-5.webp","17-6.webp","17-7.webp","IMG_1898.png","IMG_1905.png","IMG_1919.png","IMG_1925.png","IMG_1928.png","IMG_1937.png","IMG_1949.png","IMG_1959.png","IMG_1972.png","IMG_1995.png","IMG_2025.png","IMG_2031.png","IMG_2039.png"
             // Add other images for Folder 2 here
         ]
     },
