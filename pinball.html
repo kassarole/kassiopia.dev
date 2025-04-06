@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinball Game</title>
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/clock.js"></script>
+    <script src="js/checkDevice.js"></script>
+</head>
+<body>
+    <div id="taskbar">
+        <div class="start-button">
+            <div class="windows-logo"></div>
+            Start
+        </div>
+        <div class="task-buttons">
+            <a href="index.html" class="task-button">
+                <img src="images/cmd.png" alt="Home">
+                Home
+            </a>
+            <a href="about.html" class="task-button">
+                <img src="images/cmd.png" alt="About">
+                About
+            </a>
+            <a href="projects.html" class="task-button">
+                <img src="images/cmd.png" alt="Projects">
+                Projects
+            </a>
+            <a href="photos.html" class="task-button">
+                <img src="images/photos.png" alt="Photos">
+                Photos
+            </a>
+            <a href="pinball.html" class="task-button active">
+                <img src="images/pinball.png" alt="Pinball">
+                Pinball
+            </a>
+        </div>
+        <div class="system-tray">
+            <span class="clock">12:00 PM</span>
+        </div>
+      </div>
+      <div class="window" id="center-align-iframe">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                3D Pinball for Windows
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="iframe-container">
+                <iframe src="https://alula.github.io/SpaceCadetPinball/" title="Pinball Game" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="window" id="left-align">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Credits
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            Credit to <a href="https://alula.github.io/SpaceCadetPinball/">alula</a> for the pinball game.
+</body>
+</html>

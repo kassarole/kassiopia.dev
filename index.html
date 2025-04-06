@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="styles.css?v=1.1.1">
-    
+  <head>
+    <title>kassiopia.dev: Home</title>
+    <meta charset="UTF-8" />
+    <!-- Windows XP Theme (include only one theme at a time) -->
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/clock.js"></script>
+    <script src="js/checkDevice.js"></script>
+  </head>
 
-</head>
-<body>
-    <header>
-        <nav>
-            <ul class="nav-tabs">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="images.html">Photos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="center-box">
-        <h2 class="typewriter">Kassiopia's Space</h2>
-        <p class="typewriter">I began work on this site as something to tinker with as well as to post some of my projects and photos I take.</p>
-        <p class="typewriter">It's a constant work in progress as I try, add, and remove things but, it'll always have the complete and total archive of my edited photos. Enjoy!</p>
+  <body>
+    <div id="taskbar">
+        <div class="start-button">
+            <div class="windows-logo"></div>
+            Start
+        </div>
+        <div class="task-buttons">
+            <a href="index.html" class="task-button active">
+                <img src="images/cmd.png" alt="Home">
+                Home
+            </a>
+            <a href="about.html" class="task-button">
+                <img src="images/cmd.png" alt="About">
+                About
+            </a>
+            <a href="projects.html" class="task-button">
+                <img src="images/cmd.png" alt="Projects">
+                Projects
+            </a>
+            <a href="photos.html" class="task-button">
+                <img src="images/photos.png" alt="Photos">
+                Photos
+            </a>
+            <a href="pinball.html" class="task-button">
+                <img src="images/pinball.png" alt="Pinball">
+                Pinball
+            </a>
+        </div>
+        <div class="system-tray">
+            <span class="clock">12:00 PM</span>
+        </div>
+      </div>
+    <div class="window" id="center-align">
+      <div class="title-bar">
+        <div class="title-bar-text">
+          Command Prompt
+        </div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <pre class="command-prompt">Microsoft Windows XP [Version 5.1.2600] 
+&#10094;C&#10095; Copyright 1985-2001 Microsoft Corp.
+                  <br>C:&#92;WINDOWS&#92;SYSTEM32> TYPE WELCOME.TXT
+
+Kassiopia's Space
+<br>I began work on this site as something to tinker with as well as to post some of my projects and photos I take.
+<br>It's a constant work in progress as I try, add, and remove things but, it'll always have the complete and total archive of my edited photos. Enjoy!
+                  
+        </pre>
+      </div>
     </div>
-    <script src="scripts/typewriter.js"></script>
-    <div class="center-box">
-        <h2>Guestbook</h2>
-        <iframe src="https://kassiopia.atabook.org/" height="500px" width="100%" title="Guestbook"></iframe>
-    </div>
-</body>
+  </body>
 </html>

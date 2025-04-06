@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>kassiopia.dev: Photos</title>
+    <meta charset="UTF-8" />
+    <!-- Windows XP Theme (include only one theme at a time) -->
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/photos.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/checkDevice.js"></script>
+  </head>
+
+  <body>
+    <div id="taskbar">
+        <div class="start-button">
+            <div class="windows-logo"></div>
+            Start
+        </div>
+        <div class="task-buttons">
+            <a href="index.html" class="task-button">
+                <img src="images/cmd.png" alt="Home">
+                Home
+            </a>
+            <a href="about.html" class="task-button">
+                <img src="images/cmd.png" alt="About">
+                About
+            </a>
+            <a href="projects.html" class="task-button">
+                <img src="images/cmd.png" alt="Projects">
+                Projects
+            </a>
+            <a href="photos.html" class="task-button active">
+                <img src="images/photos.png" alt="Photos">
+                Photos
+            </a>
+            <a href="pinball.html" class="task-button">
+                <img src="images/pinball.png" alt="Pinball">
+                Pinball
+            </a>
+        </div>
+        <div class="system-tray">
+            <span class="clock">12:00 PM</span>
+        </div>
+      </div>
+      <div class="window photo-viewer">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Windows Picture and Fax Viewer
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="toolbar">
+                <button onclick="previousPhoto()" class="prev-button">Previous</button>
+                <button onclick="nextPhoto()" class="next-button">Next</button>
+                <div class="toolbar-separator"></div>
+                <button onclick="toggleView()" class="view-button">Gallery View</button>
+                <div class="toolbar-separator"></div>
+                <button onclick="zoomIn()" class="zoom-in">Zoom In</button>
+                <button onclick="zoomOut()" class="zoom-out">Zoom Out</button>
+            </div>
+            <div class="photo-container">
+                <div class="single-view active">
+                    <img id="current-photo" src="" alt="Current photo">
+                </div>
+                <div class="gallery-view">
+                    <div id="photo-grid"></div>
+                </div>
+            </div>
+            <div class="photo-info">
+                <span id="photo-count">Photo 1 of 1</span>
+                <span id="photo-name">Loading...</span>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

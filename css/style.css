@@ -1,0 +1,329 @@
+body {
+    background-color: #ece9d8;
+    background-image: url("../images/bliss.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 30px;
+}
+#left-align {
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 16px;
+    background-color: #ece9d8;
+}
+
+#left-align .window-body {
+    padding: 8px;
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+#left-align .window-body a {
+    color: #0000EE;
+    text-decoration: underline;
+}
+#left-align > .tree-view {
+    height: 100vh;
+    margin: 0;
+    padding: 4px;
+}
+
+#center-align {
+    width: calc(100% - 64px);
+    margin: 32px;
+    position: relative;
+}
+
+.command-prompt {
+    margin: 0;
+    padding: 8px;
+    white-space: pre-wrap;
+    font-family: "Courier New", monospace;
+    line-height: 1.5;
+}
+
+.command-prompt a {
+    color: #0000EE;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.command-prompt a:visited {
+    color: #551A8B;
+}
+#taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, #245edc, #1440a1);
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+    z-index: 9999;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    padding: 1px 4px;
+    margin: 0 2px;
+    background: linear-gradient(to bottom, #2fc234, #2bc033 5%, #26ab2e 20%, #259e2b 40%, #249728 45%, #23901f 52%, #218d1c 55%, #1f851a);
+    border: 1px solid #1c5b20;
+    border-radius: 3px;
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px #166619;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background: linear-gradient(to bottom, #3dd846, #33c039 5%, #2fb335 20%, #2ca632 40%, #2a9e2f 45%, #279a2c 52%, #249629 55%, #228f27);
+}
+
+.start-button:active {
+    background: linear-gradient(to bottom, #1f851a, #218d1c 5%, #23901f 20%, #249728 40%, #259e2b 45%, #26ab2e 52%, #2bc033 55%, #2fc234);
+}
+
+.windows-logo {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background: 
+        radial-gradient(circle at 25% 25%, #f8572c 0, #f8572c 35%, transparent 35%),
+        radial-gradient(circle at 75% 25%, #84c51d 0, #84c51d 35%, transparent 35%),
+        radial-gradient(circle at 25% 75%, #00adef 0, #00adef 35%, transparent 35%),
+        radial-gradient(circle at 75% 75%, #ffc80c 0, #ffc80c 35%, transparent 35%);
+    background-size: 100% 100%;
+    transform: rotate(-5deg);
+}
+
+.task-buttons {
+    display: flex;
+    gap: 2px;
+    flex-grow: 1;
+    padding: 0 4px;
+}
+
+.task-button {
+    display: flex;
+    align-items: center;
+    min-width: 160px;
+    height: 22px;
+    padding: 1px 4px;
+    border: 1px solid #1f4088;
+    border-radius: 2px;
+    background: linear-gradient(to bottom, #4e8cf6 0%, #4381ed 5%, #3b75e9 15%, #366fe6 22%, #3369e4 33%, #2f62de 50%, #2c5edb 66%, #2a5bd9 82%, #285bd8 100%);
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.task-button:hover {
+    background: linear-gradient(to bottom, #5c95f7 0%, #538ef3 5%, #4b84f0 15%, #467bee 22%, #4374eb 33%, #3f6ce6 50%, #3c68e3 66%, #3a65e1 82%, #3964e0 100%);
+}
+
+.task-button.active {
+    background: linear-gradient(to bottom, #78a8f8 0%, #70a2f6 5%, #689af3 15%, #6394f1 22%, #5d8def 33%, #578ae9 50%, #5386e7 66%, #5184e5 82%, #5083e4 100%);
+}
+
+.task-button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+/* Photo Viewer Specific Styles */
+.photo-viewer {
+    width: 540px;
+    height: 480px;
+    margin: 32px auto;
+}
+
+.photo-viewer .window-body {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: #ece9d8;
+    height: calc(100% - 60px);
+}
+
+.photo-viewer .toolbar {
+    flex-shrink: 0;
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #919b9c;
+    min-height: 30px;
+}
+
+.photo-viewer .toolbar button {
+    padding: 4px 8px;
+    min-width: 80px;
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+}
+
+.photo-viewer .toolbar button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.photo-viewer .photo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    margin: 8px 0;
+    overflow: hidden;
+    position: relative;
+    max-height: calc(100% - 90px);
+}
+
+.photo-viewer .single-view {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.photo-viewer .gallery-view {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.photo-viewer .single-view.active {
+    display: inline-table;
+}
+
+.photo-viewer .gallery-view.active {
+    display: block;
+}
+
+.photo-viewer .photo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.photo-viewer .photo-info {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #919b9c;
+    margin-top: auto;
+}
+
+.photo-viewer #photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 120px);
+    gap: 12px;
+    padding: 12px;
+    background-color: #fff;
+}
+
+.photo-viewer .thumbnail {
+    width: 120px;
+    height: 120px;
+    border: 2px solid transparent;
+}
+
+.photo-viewer .thumbnail:hover {
+    border-color: #0078d7;
+}
+
+.photo-viewer .thumbnail.selected {
+    border-color: #005499;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.iframe-container {
+    width: 600px;
+    height: 450px;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 600px;
+    border: none;
+    transform: translate(-50%, -43%) scale(1);
+    margin: 0;
+}
+
+#center-align-iframe.window {
+    width: 616px;
+    height: 486px;
+    margin: 32px auto;
+}
+.system-tray {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    margin-left: auto;
+    background: linear-gradient(to bottom, #2887e4, #2272e3);
+    border-left: 1px solid #1d5fab;
+    height: 100%;
+}
+
+.system-tray .clock {
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    padding: 0 4px;
+}
+.alert-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    z-index: 10000;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.alert-window .window-body {
+    padding: 16px;
+    text-align: center;
+}
+
+.alert-window .button-row {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.alert-window button {
+    min-width: 80px;
+    margin: 0 4px;
+}
