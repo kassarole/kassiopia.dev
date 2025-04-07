@@ -104,21 +104,18 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
             <iframe src="https://alula.github.io/SpaceCadetPinball/" title="Pinball Game" allowfullscreen></iframe>
             </div>`,
         width: '616px'
+    },
+    credits: {
+        title: 'Credits',
+        content: `
+            <pre class="command-prompt">Microsoft Windows XP [Version 5.1.2600]
+&#10094;C&#10095; Copyright 1985-2001 Microsoft Corp.
+<br>C:&#92;WINDOWS&#92;SYSTEM32> TYPE CREDITS.TXT
+- Pinball game from <a href="https://alula.github.io/SpaceCadetPinball/" target="_blank">alula.github.io</a>
+- Built using <a href="https://botoxparty.github.io/XP.css/">xp.css</a>
+</pre>`
     }
 };
-
-function createStartMenu() {
-    const startButton = document.createElement('button');
-    startButton.className = 'start-button';
-    startButton.innerHTML = `
-        <img src="images/windows-logo.svg" alt="Start">
-        <span>Start</span>
-    `;
-    
-    // Add to taskbar before any other content
-    const taskbar = document.querySelector('#taskbar');
-    taskbar.insertBefore(startButton, taskbar.firstChild);
-}
 
 function createOrFocusWindow(windowType) {
     const existingWindow = document.querySelector(`#window-${windowType}`);
@@ -227,9 +224,41 @@ window.closeWindow = function(windowType) {
     }
 }
 
+function toggleStartMenu() {
+    const startMenu = document.getElementById('start-menu');
+    startMenu.classList.toggle('visible');
+}
+
+function initializeStartMenu() {
+    const startButton = document.querySelector('.start-button');
+    const startMenu = document.getElementById('start-menu');
+    
+    startButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleStartMenu();
+    });
+
+    // Close start menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!startMenu.contains(e.target) && !e.target.matches('.start-button')) {
+            startMenu.classList.remove('visible');
+        }
+    });
+
+    // Handle start menu item clicks
+    document.querySelectorAll('.start-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const windowType = item.dataset.window;
+            createOrFocusWindow(windowType);
+            toggleStartMenu();
+        });
+    });
+}
+
 // Initialize desktop when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    createStartMenu();
+    initializeStartMenu();
     // Add click handlers for desktop icons
     document.querySelectorAll('.desktop-icon').forEach(icon => {
         icon.addEventListener('click', () => {
