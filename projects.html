@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/clock.js"></script>
     <script src="js/checkDevice.js"></script>
+    <script src="js/windowManager.js"></script>
   </head>
 
   <body>
@@ -74,4 +75,9 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
         </div>
       </div>
   </body>
+  <script>
+    document.querySelectorAll('.window').forEach(windowEl => {
+      dragElement(windowEl);
+    });
+  </script>
 </html>

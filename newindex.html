@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>kassiopia.dev: Home</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/clock.js" defer></script>
+    <script src="js/checkDevice.js" defer></script>
+    <script src="js/windowManager.js" defer></script>
+    <script src="js/photos.js" defer></script>
+    <script src="js/desktop.js" defer></script>
+  </head>
+
+  <body>
+    <div class="desktop">
+      <div class="desktop-icon" data-window="command">
+        <img src="images/cmd.png" alt="Command Prompt">
+        <span>Command Prompt</span>
+      </div>
+      <div class="desktop-icon" data-window="about">
+        <img src="images/cmd.png" alt="About">
+        <span>About</span>
+      </div>
+      <div class="desktop-icon" data-window="projects">
+        <img src="images/cmd.png" alt="Projects">
+        <span>Projects</span>
+      </div>
+      <div class="desktop-icon" data-window="photos">
+        <img src="images/photos.png" alt="Photos">
+        <span>Photos</span>
+      </div>
+      <div class="desktop-icon" data-window="pinball">
+        <img src="images/pinball.png" alt="Pinball">
+        <span>Pinball</span>
+      </div>
+    </div>
+    
+    <div id="windows-container"></div>
+    
+    <div id="taskbar">
+      <div class="system-tray">
+        <span class="clock">12:00 PM</span>
+      </div>
+    </div>
+  </body>
+</html>

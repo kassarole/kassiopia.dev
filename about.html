@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/clock.js"></script>
     <script src="js/checkDevice.js"></script>
+    <script src="js/windowManager.js"></script>
   </head>
 
   <body>
@@ -66,5 +67,10 @@ Hiya I'm Kassiopia. I'm a former mobile forensics researcher currently working a
 - Blog: <a href="https://blog.kassiopia.dev" target="_blank">blog.kassiopia.dev</a></pre>
   </div>
 </div>
+<script>
+  document.querySelectorAll('.window').forEach(windowEl => {
+    dragElement(windowEl);
+  });
+</script>
 </body>
 </html>

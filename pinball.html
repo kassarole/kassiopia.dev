@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/clock.js"></script>
     <script src="js/checkDevice.js"></script>
+    <script src="js/windowManager.js"></script>
 </head>
 <body>
     <div id="taskbar">
@@ -41,7 +42,7 @@
             <span class="clock">12:00 PM</span>
         </div>
       </div>
-      <div class="window" id="center-align-iframe">
+      <div class="window" id="center-align-iframe" style="position: absolute;">
         <div class="title-bar">
             <div class="title-bar-text">
                 3D Pinball for Windows
@@ -72,4 +73,9 @@
         <div class="window-body">
             Credit to <a href="https://alula.github.io/SpaceCadetPinball/">alula</a> for the pinball game.
 </body>
+<script>
+    document.querySelectorAll('.window').forEach(windowEl => {
+      dragElement(windowEl);
+    });
+  </script>
 </html>

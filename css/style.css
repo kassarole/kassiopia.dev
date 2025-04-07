@@ -1,298 +1,174 @@
+/* Base Styles */
 body {
-    background-color: #ece9d8;
     background-image: url("../images/bliss.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
     margin: 0;
     padding-bottom: 30px;
 }
-#left-align {
-    width: 250px;
+
+/* Desktop */
+.desktop {
     position: fixed;
+    top: 0;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 16px;
-    background-color: #ece9d8;
+    right: 0;
+    bottom: 30px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 10px;
+    align-content: start;
 }
 
-#left-align .window-body {
-    padding: 8px;
+.desktop-icon {
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    cursor: pointer;
+    padding: 4px;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-icon:hover {
+    background-color: rgba(49, 106, 197, 0.1);
+    border: 1px solid rgba(49, 106, 197, 0.4);
+}
+
+.desktop-icon img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+}
+
+.desktop-icon span {
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     font-family: Tahoma, sans-serif;
     font-size: 11px;
-    line-height: 1.4;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 1.2;
 }
 
-#left-align .window-body a {
-    color: #0000EE;
-    text-decoration: underline;
-}
-#left-align > .tree-view {
-    height: 100vh;
-    margin: 0;
-    padding: 4px;
+/* Windows */
+.window {
+    position: absolute;
+    min-width: 200px;
+    min-height: 150px;
+    background: #fff;
+    display: block;
+    overflow: hidden;
 }
 
-#center-align {
-    width: calc(100% - 64px);
-    margin: 32px;
-    position: relative;
+.window-body {
+    padding: 8px;
+    height: calc(100% - 20px); /* Account for title bar */
+    overflow: auto;
 }
 
 .command-prompt {
-    margin: 0;
-    padding: 8px;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+    line-height: 1.4;
     white-space: pre-wrap;
-    font-family: "Courier New", monospace;
-    line-height: 1.5;
+    word-wrap: break-word;
+    padding: 8px;
 }
 
 .command-prompt a {
-    color: #0000EE;
-    text-decoration: underline;
-    cursor: pointer;
+    color: #5bf;
+    text-decoration: none;
 }
 
-.command-prompt a:visited {
-    color: #551A8B;
+.command-prompt a:hover {
+    text-decoration: underline;
 }
+
+/* Taskbar */
 #taskbar {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     height: 30px;
-    background: linear-gradient(to bottom, #245edc, #1440a1);
+    background: linear-gradient(to bottom, #2A5EDF, #0540B4);
     display: flex;
     align-items: center;
     padding: 0 2px;
+    padding-left: 0; /* Remove left padding to accommodate start button */
+    gap: 0;
     z-index: 9999;
+    border-top: 1px solid #0841B7;
 }
 
-.start-button {
-    display: flex;
-    align-items: center;
-    height: 22px;
-    padding: 1px 4px;
-    margin: 0 2px;
-    background: linear-gradient(to bottom, #2fc234, #2bc033 5%, #26ab2e 20%, #259e2b 40%, #249728 45%, #23901f 52%, #218d1c 55%, #1f851a);
-    border: 1px solid #1c5b20;
-    border-radius: 3px;
-    color: white;
-    font-family: Tahoma, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    text-shadow: 1px 1px #166619;
-    cursor: pointer;
-}
-
-.start-button:hover {
-    background: linear-gradient(to bottom, #3dd846, #33c039 5%, #2fb335 20%, #2ca632 40%, #2a9e2f 45%, #279a2c 52%, #249629 55%, #228f27);
-}
-
-.start-button:active {
-    background: linear-gradient(to bottom, #1f851a, #218d1c 5%, #23901f 20%, #249728 40%, #259e2b 45%, #26ab2e 52%, #2bc033 55%, #2fc234);
-}
-
-.windows-logo {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-    background: 
-        radial-gradient(circle at 25% 25%, #f8572c 0, #f8572c 35%, transparent 35%),
-        radial-gradient(circle at 75% 25%, #84c51d 0, #84c51d 35%, transparent 35%),
-        radial-gradient(circle at 25% 75%, #00adef 0, #00adef 35%, transparent 35%),
-        radial-gradient(circle at 75% 75%, #ffc80c 0, #ffc80c 35%, transparent 35%);
-    background-size: 100% 100%;
-    transform: rotate(-5deg);
-}
-
-.task-buttons {
-    display: flex;
-    gap: 2px;
-    flex-grow: 1;
-    padding: 0 4px;
-}
-
-.task-button {
-    display: flex;
-    align-items: center;
+.taskbar-button {
+    height: 24px;
     min-width: 160px;
-    height: 22px;
-    padding: 1px 4px;
-    border: 1px solid #1f4088;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 5px;
+    margin: 2px 1px;
+    background: linear-gradient(to bottom, #3C70E0, #2355C4);
+    border: 1px solid #244AB1;
     border-radius: 2px;
-    background: linear-gradient(to bottom, #4e8cf6 0%, #4381ed 5%, #3b75e9 15%, #366fe6 22%, #3369e4 33%, #2f62de 50%, #2c5edb 66%, #2a5bd9 82%, #285bd8 100%);
     color: white;
     font-family: Tahoma, sans-serif;
     font-size: 11px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    text-decoration: none;
+    box-shadow: inset 1px 1px rgba(255, 255, 255, 0.2);
 }
 
-.task-button:hover {
-    background: linear-gradient(to bottom, #5c95f7 0%, #538ef3 5%, #4b84f0 15%, #467bee 22%, #4374eb 33%, #3f6ce6 50%, #3c68e3 66%, #3a65e1 82%, #3964e0 100%);
+.taskbar-button:not(.active) {
+    background: linear-gradient(to bottom, #2A5EDF, #0540B4);
+    border: 1px solid #1B3A89;
 }
 
-.task-button.active {
-    background: linear-gradient(to bottom, #78a8f8 0%, #70a2f6 5%, #689af3 15%, #6394f1 22%, #5d8def 33%, #578ae9 50%, #5386e7 66%, #5184e5 82%, #5083e4 100%);
+.taskbar-button:hover:not(.active) {
+    background: linear-gradient(to bottom, #3468E1, #0945B8);
 }
 
-.task-button img {
+.taskbar-button.active {
+    background: linear-gradient(to bottom, #4680E3, #2760CE);
+    border: 1px solid #1D3F9E;
+    box-shadow: inset 1px 1px rgba(255, 255, 255, 0.3),
+                inset -1px -1px rgba(0, 0, 0, 0.1);
+}
+
+.taskbar-button img {
     width: 16px;
     height: 16px;
-    margin-right: 4px;
-}
-/* Photo Viewer Specific Styles */
-.photo-viewer {
-    width: 540px;
-    height: 480px;
-    margin: 32px auto;
+    margin-right: 2px;
 }
 
-.photo-viewer .window-body {
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-    background-color: #ece9d8;
-    height: calc(100% - 60px);
-}
-
-.photo-viewer .toolbar {
-    flex-shrink: 0;
-    display: flex;
-    gap: 4px;
-    padding: 4px;
-    background-color: #fff;
-    border: 1px solid #919b9c;
-    min-height: 30px;
-}
-
-.photo-viewer .toolbar button {
-    padding: 4px 8px;
-    min-width: 80px;
-    font-family: Tahoma, sans-serif;
-    font-size: 11px;
-}
-
-.photo-viewer .toolbar button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.photo-viewer .photo-container {
+.taskbar-button span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000;
-    margin: 8px 0;
-    overflow: hidden;
-    position: relative;
-    max-height: calc(100% - 90px);
 }
 
-.photo-viewer .single-view {
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-.photo-viewer .gallery-view {
-    display: none;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-}
-
-.photo-viewer .single-view.active {
-    display: inline-table;
-}
-
-.photo-viewer .gallery-view.active {
-    display: block;
-}
-
-.photo-viewer .photo-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.2s ease;
-}
-
-.photo-viewer .photo-info {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 4px;
-    background-color: #fff;
-    border: 1px solid #919b9c;
-    margin-top: auto;
-}
-
-.photo-viewer #photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 120px);
-    gap: 12px;
-    padding: 12px;
-    background-color: #fff;
-}
-
-.photo-viewer .thumbnail {
-    width: 120px;
-    height: 120px;
-    border: 2px solid transparent;
-}
-
-.photo-viewer .thumbnail:hover {
-    border-color: #0078d7;
-}
-
-.photo-viewer .thumbnail.selected {
-    border-color: #005499;
-}
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-.iframe-container {
-    width: 600px;
-    height: 450px;
-    overflow: hidden;
-    background: #000;
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-.iframe-container iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 800px;
-    height: 600px;
-    border: none;
-    transform: translate(-50%, -43%) scale(1);
-    margin: 0;
-}
-
-#center-align-iframe.window {
-    width: 616px;
-    height: 486px;
-    margin: 32px auto;
-}
 .system-tray {
     display: flex;
     align-items: center;
     padding: 0 8px;
     margin-left: auto;
-    background: linear-gradient(to bottom, #2887e4, #2272e3);
-    border-left: 1px solid #1d5fab;
     height: 100%;
+    border-left: 1px solid #0841B7;
+    background: linear-gradient(to bottom, #2A5EDF, #0540B4);
 }
 
 .system-tray .clock {
@@ -302,28 +178,127 @@ iframe {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
     padding: 0 4px;
 }
-.alert-window {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    z-index: 10000;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+/* Start Menu */
+.start-button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 100%;
+    padding: 0 8px;
+    margin-right: 2px;
+    background: linear-gradient(to bottom, #3C8B1C, #276110);
+    border: none;
+    border-right: 1px solid #1D4A0C;
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 1px 0 rgba(255, 255, 255, 0.3),
+                inset 0 1px rgba(255, 255, 255, 0.3);
 }
 
-.alert-window .window-body {
-    padding: 16px;
-    text-align: center;
+.start-button:hover {
+    background: linear-gradient(to bottom, #4CA125, #307515);
 }
 
-.alert-window .button-row {
-    margin-top: 16px;
+.start-button:active {
+    background: linear-gradient(to bottom, #276110, #3C8B1C);
+    box-shadow: inset 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.start-button img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Photo Viewer */
+.photo-viewer {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.photo-container {
+    flex: 1;
+    position: relative;
+    background: #000;
+    min-height: 450px;
+    overflow: hidden;
+}
+
+.single-view,
+.gallery-view {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.single-view.active {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.alert-window button {
-    min-width: 80px;
-    margin: 0 4px;
+.single-view img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.gallery-view.active {
+    display: block;
+    background: #fff;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+#photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+}
+
+.thumbnail {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 2px;
+}
+
+.thumbnail:hover,
+.thumbnail.selected {
+    border-color: #0078d7;
+}
+
+.photo-info {
+    padding: 5px;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #999;
+}
+
+/* Pinball Window */
+.iframe-container {
+    width: 600px;
+    height: 450px;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
