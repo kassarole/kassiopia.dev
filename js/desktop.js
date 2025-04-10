@@ -1,22 +1,3 @@
-let zIndex = 1000;
-
-function focusWindow(windowEl) {
-    const windowType = windowEl.id.replace('window-', '');
-    
-    // Update all windows and taskbar buttons
-    document.querySelectorAll('.window').forEach(win => {
-        win.classList.remove('active');
-        win.style.zIndex = 1000;
-        const btnId = `taskbar-${win.id.replace('window-', '')}`;
-        document.querySelector(`#${btnId}`).classList.remove('active');
-    });
-    
-    // Activate current window and taskbar button
-    windowEl.classList.add('active');
-    windowEl.style.zIndex = zIndex++;
-    document.querySelector(`#taskbar-${windowType}`).classList.add('active');
-}
-
 const windowTemplates = {
     command: {
         title: 'Command Prompt',
@@ -112,8 +93,25 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
 &#10094;C&#10095; Copyright 1985-2001 Microsoft Corp.
 <br>C:&#92;WINDOWS&#92;SYSTEM32> TYPE CREDITS.TXT
 - Pinball game from <a href="https://alula.github.io/SpaceCadetPinball/" target="_blank">alula.github.io</a>
+- Spider Solitaire from <a href="https://games.gameboss.com/spidersolitairewindowsxp/index.html?lang=en" target="_blank">games.gameboss.com</a>
 - Built using <a href="https://botoxparty.github.io/XP.css/">xp.css</a>
 </pre>`
+    },
+    spider: {
+        title: 'Spider Solitaire',
+        content: `
+            <div class="iframe-container spider">
+                <iframe 
+                    src="https://games.gameboss.com/spidersolitairewindowsxp/index.html?lang=en" 
+                    title="Spider Solitaire" 
+                    frameborder="0"
+                    scrolling="no"
+                    allow="fullscreen"
+                    sandbox="allow-scripts allow-same-origin allow-modals">
+                </iframe>
+            </div>`,
+        width: '580px',
+        height: '375px'
     }
 };
 
@@ -256,9 +254,47 @@ function initializeStartMenu() {
     });
 }
 
+function initializeNetworkMenu() {
+    const networkButton = document.querySelector('.network-button');
+    const networkPopup = document.getElementById('network-popup');
+    
+    networkButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        networkPopup.classList.toggle('visible');
+    });
+
+    // Close network popup when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!networkPopup.contains(e.target) && !e.target.matches('.network-button')) {
+            networkPopup.classList.remove('visible');
+        }
+    });
+}
+
+function initializeVolumeControl() {
+    const volumeButton = document.querySelector('.volume-button');
+    const volumePopup = document.getElementById('volume-popup');
+    
+    volumeButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        volumePopup.classList.toggle('visible');
+        // Hide network popup if open
+        document.getElementById('network-popup').classList.remove('visible');
+    });
+
+    // Close volume popup when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!volumePopup.contains(e.target) && !e.target.matches('.volume-button')) {
+            volumePopup.classList.remove('visible');
+        }
+    });
+}
+
 // Initialize desktop when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initializeStartMenu();
+    initializeNetworkMenu();
+    initializeVolumeControl();
     // Add click handlers for desktop icons
     document.querySelectorAll('.desktop-icon').forEach(icon => {
         icon.addEventListener('click', () => {

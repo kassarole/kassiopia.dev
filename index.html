@@ -38,6 +38,10 @@
         <img src="images/credits.png" alt="Credits">
         <span>Credits</span>
       </div>
+      <div class="desktop-icon" data-window="spider">
+        <img src="images/spider.png" alt="Spider Solitaire">
+        <span>Spider Solitaire</span>
+      </div>
     </div>
     
     <div id="windows-container"></div>
@@ -74,6 +78,10 @@
               <img src="images/pinball.png" alt="Pinball">
               <span>Pinball</span>
             </a>
+            <a href="#" class="start-item" data-window="spider">
+              <img src="images/spider.png" alt="Spider Solitaire">
+              <span>Spider Solitaire</span>
+            </a>
           </div>
           <div class="start-menu-footer">
             <a href="#" class="start-item" data-window="credits">
@@ -84,7 +92,56 @@
         </div>
       </div>
       <div class="system-tray">
+        <button class="network-button" title="Network Connection">
+          <img src="images/network.png" alt="Network">
+        </button>
+        <button class="volume-button" title="Volume Control">
+          <img src="images/volume.png" alt="Volume">
+        </button>
         <span class="clock">12:00 PM</span>
+      </div>
+    </div>
+
+    <div id="network-popup" class="hidden window">
+      <div class="title-bar">
+          <div class="title-bar-text">Network Connections</div>
+      </div>
+      <div class="window-body">
+          <div class="status-bar">
+              <p class="status-bar-field">Network Tasks</p>
+          </div>
+          <menu role="tablist">
+              <button aria-selected="true">LAN Connection</button>
+          </menu>
+          <div class="network-items">
+              <a href="https://nekoweb.org" class="network-item" target="_blank">
+                  <img src="images/connected.png" alt="Connected">
+                  <div class="network-item-text">
+                      <span class="network-name">NekoWeb</span>
+                      <span class="status-bar-field">Connected, 1Gbps</span>
+                  </div>
+              </a>
+              <a href="https://blog.kassiopia.dev" class="network-item" target="_blank">
+                  <img src="images/connected.png" alt="Blog">
+                  <div class="network-item-text">
+                      <span class="network-name">Blog</span>
+                      <span class="status-bar-field">Connected, 1Gbps</span>
+                  </div>
+              </a>
+          </div>
+      </div>
+    </div>
+
+    <div id="volume-popup" class="hidden window">
+      <div class="title-bar">
+        <div class="title-bar-text">Volume Control</div>
+      </div>
+      <div class="window-body">
+        <div class="volume-control">
+          <img src="images/volume-large.png" alt="Volume">
+          <label for="volume-slider">Main Volume</label>
+          <input id="volume-slider" type="range" min="0" max="100" value="50">
+        </div>
       </div>
     </div>
   </body>
