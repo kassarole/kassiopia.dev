@@ -48,10 +48,23 @@ function updatePhotoCount() {
 
 function toggleView() {
     isGalleryView = !isGalleryView;
+    const viewButton = document.querySelector('.view-button');
+    
     document.querySelector('.single-view').classList.toggle('active', !isGalleryView);
     document.querySelector('.gallery-view').classList.toggle('active', isGalleryView);
-    document.querySelector('.view-button').textContent = 
-        isGalleryView ? 'Single View' : 'Gallery View';
+    
+    // Create DOM elements instead of using innerHTML
+    viewButton.textContent = ''; // Clear existing content
+    
+    const img = document.createElement('img');
+    img.src = 'images/gallery.png';
+    img.alt = isGalleryView ? 'Single' : 'Gallery';
+    
+    const span = document.createElement('span');
+    span.textContent = isGalleryView ? 'Single View' : 'Gallery View';
+    
+    viewButton.appendChild(img);
+    viewButton.appendChild(span);
 }
 
 function createGalleryView() {

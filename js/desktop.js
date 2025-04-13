@@ -10,7 +10,8 @@ const windowTemplates = {
             <br>I began work on this site as something to tinker with as well as to post some of my projects and photos I take.
             <br>It's a constant work in progress as I try, add, and remove things but, it'll always have the complete and total archive of my edited photos. Enjoy!
             </pre>`,
-        width: '800px'
+        width: '800px',
+        height: '400px'  // Standard CMD height
     },
     about: {
         title: 'Command Prompt',
@@ -25,7 +26,8 @@ Hiya I'm Kassiopia. I'm a former mobile forensics researcher currently working a
 - Bluesky: <a href="https://bsky.app/profile/fauxkassarole.bsky.social" target="_blank">@fauxkassarole.bsky.social</a>
 - Tumblr: <a href="https://fauxkassarole.tumblr.com" target="_blank">fauxkassarole.tumblr.com</a>
 - Blog: <a href="https://blog.kassiopia.dev" target="_blank">blog.kassiopia.dev</a></pre>`,
-        width: '800px'
+        width: '800px',
+        height: '400px'  // Same as command
     },
     projects: {
         title: 'Command Prompt',
@@ -47,36 +49,58 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
     - <a href="https://blog.kassiopia.dev/?p=105">SANS Holiday Hack 2023</a>
     - <a href="https://blog.kassiopia.dev/?p=27">Ersatz TV Setup Guide</a>
     </pre>`,
-        width: '800px'
+        width: '800px',
+        height: '600px'  // Taller for more content
     },
     photos: {
         title: 'Windows Picture and Fax Viewer',
         content: `
-            <div class="photo-viewer">
-                <div class="toolbar">
-                    <button class="prev-button">Previous</button>
-                    <button class="next-button">Next</button>
-                    <div class="toolbar-separator"></div>
-                    <button class="view-button">Gallery View</button>
-                    <div class="toolbar-separator"></div>
-                    <button class="zoom-in">Zoom In</button>
-                    <button class="zoom-out">Zoom Out</button>
+        <div class="photo-viewer">
+            <div class="toolbar">
+                <div class="toolbar-group">
+                    <button class="prev-button" aria-label="Previous">
+                        <img src="images/prev.png" alt="Previous">
+                        <span>Previous</span>
+                    </button>
+                    <button class="next-button" aria-label="Next">
+                        <img src="images/next.png" alt="Next">
+                        <span>Next</span>
+                    </button>
                 </div>
-                <div class="photo-container">
-                    <div class="single-view active">
-                        <img id="current-photo" src="" alt="Current photo">
-                    </div>
-                    <div class="gallery-view">
-                        <div id="photo-grid"></div>
-                    </div>
+                <div class="toolbar-separator"></div>
+                <div class="toolbar-group">
+                    <button class="view-button" aria-label="View">
+                        <img src="images/gallery.png" alt="Gallery">
+                        <span>Gallery View</span>
+                    </button>
                 </div>
-                <div class="photo-info">
-                    <span id="photo-count">Photo 1 of 1</span>
-                    <span id="photo-name">Loading...</span>
+                <div class="toolbar-separator"></div>
+                <div class="toolbar-group">
+                    <button class="zoom-in" aria-label="Zoom In">
+                        <img src="images/zoom-in.png" alt="Zoom In">
+                        <span>Zoom In</span>
+                    </button>
+                    <button class="zoom-out" aria-label="Zoom Out">
+                        <img src="images/zoom-out.png" alt="Zoom Out">
+                        <span>Zoom Out</span>
+                    </button>
                 </div>
-            </div>`,
-        width: '900px',
-        height: '700px'
+            </div>
+            <div class="photo-container">
+                <div class="single-view active">
+                    <img id="current-photo" src="" alt="Current photo">
+                </div>
+                <div class="gallery-view">
+                    <div id="photo-grid"></div>
+                </div>
+            </div>
+            <div class="photo-info">
+                <span id="photo-count">Photo 1 of 1</span>
+                <span id="photo-name">Loading...</span>
+            </div>
+        </div>`,
+        width: '750px',  // Updated width
+        height: '550px'  // Updated height to match XP photo viewer
     },
     pinball: {
         title: 'Space Cadet Pinball',
@@ -84,7 +108,8 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
             <div class="iframe-container">
             <iframe src="https://alula.github.io/SpaceCadetPinball/" title="Pinball Game" allowfullscreen></iframe>
             </div>`,
-        width: '616px'
+        width: '616px',
+        height: '500px'  // Match game dimensions
     },
     credits: {
         title: 'Credits',
@@ -95,7 +120,9 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
 - Pinball game from <a href="https://alula.github.io/SpaceCadetPinball/" target="_blank">alula.github.io</a>
 - Spider Solitaire from <a href="https://games.gameboss.com/spidersolitairewindowsxp/index.html?lang=en" target="_blank">games.gameboss.com</a>
 - Built using <a href="https://botoxparty.github.io/XP.css/">xp.css</a>
-</pre>`
+</pre>`,
+        width: '800px',
+        height: '400px'  // Standard CMD height
     },
     spider: {
         title: 'Spider Solitaire',
@@ -111,7 +138,7 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
                 </iframe>
             </div>`,
         width: '580px',
-        height: '375px'
+        height: '375px'  // Match game dimensions
     }
 };
 
@@ -122,38 +149,15 @@ function createOrFocusWindow(windowType) {
         return;
     }
 
-    const template = windowTemplates[windowType];
-    const windowEl = document.createElement('div');
-    windowEl.className = 'window active';
-    windowEl.id = `window-${windowType}`;
-    windowEl.style.width = template.width;
-    windowEl.style.zIndex = zIndex++;
-    
-    // Create window content
-    windowEl.innerHTML = `
-        <div class="title-bar">
-            <div class="title-bar-text">${template.title}</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize" onclick="minimizeWindow('${windowType}')"></button>
-                <button aria-label="Maximize" onclick="maximizeWindow('${windowType}')"></button>
-                <button aria-label="Close" onclick="closeWindow('${windowType}')"></button>
-            </div>
-        </div>
-        <div class="window-body">${template.content}</div>
-    `;
-
-    // Position window
-    const windowCount = document.querySelectorAll('.window').length;
-    windowEl.style.top = `${50 + (windowCount * 20)}px`;
-    windowEl.style.left = `${50 + (windowCount * 20)}px`;
+    const windowEl = createWindow(windowType);
 
     // Add to taskbar
     const taskbarButton = document.createElement('button');
     taskbarButton.className = 'taskbar-button active';
     taskbarButton.id = `taskbar-${windowType}`;
     taskbarButton.innerHTML = `
-        <img src="images/${windowType}.png" alt="${template.title}">
-        <span>${template.title}</span>
+        <img src="images/${windowType}.png" alt="${windowTemplates[windowType].title}">
+        <span>${windowTemplates[windowType].title}</span>
     `;
     taskbarButton.addEventListener('click', () => {
         const win = document.querySelector(`#window-${windowType}`);
@@ -180,6 +184,52 @@ function createOrFocusWindow(windowType) {
     }
 
     focusWindow(windowEl);
+    return windowEl;
+}
+
+function createWindow(windowType) {
+    const template = windowTemplates[windowType];
+    const windowEl = document.createElement('div');
+    windowEl.id = `window-${windowType}`;
+    windowEl.className = `window ${windowType}-window`;
+    windowEl.style.width = template.width || '300px';
+    windowEl.style.height = template.height || '200px';
+    
+    // Create window content with special case for photo viewer
+    const windowBodyClass = windowType === 'photos' ? 'photo-window-body' : 'window-body';
+    
+    windowEl.innerHTML = `
+        <div class="title-bar">
+            <div class="title-bar-text">${template.title}</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize" onclick="minimizeWindow('${windowType}')"></button>
+                <button aria-label="Maximize" onclick="maximizeWindow('${windowType}')"></button>
+                <button aria-label="Close" onclick="closeWindow('${windowType}')"></button>
+            </div>
+        </div>
+        <div class="${windowBodyClass}">${template.content}</div>
+    `;
+
+    // Position window
+    const windowCount = document.querySelectorAll('.window').length;
+    windowEl.style.top = `${50 + (windowCount * 20)}px`;
+    windowEl.style.left = `${50 + (windowCount * 20)}px`;
+
+    // Add event listeners after the window is created
+    if (windowType === 'photos') {
+        const viewButton = windowEl.querySelector('.view-button');
+        const prevButton = windowEl.querySelector('.prev-button');
+        const nextButton = windowEl.querySelector('.next-button');
+        const zoomInButton = windowEl.querySelector('.zoom-in');
+        const zoomOutButton = windowEl.querySelector('.zoom-out');
+        
+        viewButton.addEventListener('click', toggleView);
+        prevButton.addEventListener('click', previousPhoto);
+        nextButton.addEventListener('click', nextPhoto);
+        zoomInButton.addEventListener('click', zoomIn);
+        zoomOutButton.addEventListener('click', zoomOut);
+    }
+    
     return windowEl;
 }
 
