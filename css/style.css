@@ -72,6 +72,13 @@ body {
     padding: 0;
     height: calc(100% - 28px); /* Account for title bar */
     overflow: hidden;
+}
+
+/* Add specific background for command prompt windows */
+.window[id^="window-command"] .window-body,
+.window[id="window-about"] .window-body,
+.window[id="window-projects"] .window-body,
+.window[id="window-credits"] .window-body {
     background: #000;
 }
 
