@@ -43,6 +43,8 @@ From time to time I like to release the utilities I've written. These can be fou
     - This is a python script for searching for and then downloading books from libgen. It has a simple web UI and a CLI version.
 - <a href="https://git.basedzone.xyz/kass/MVIMG_Carving" target="_blank">MVIMG Carving</a>
     - This is a python script for extracting the video segments from Android Motion Videos (Android version of Live Photos).
+- Untitled Game Project
+    - Not much to say about this right now. I'm working on it with my partner and may have little screenshots and notes to share about it.
 I  also occasionally post blog posts. Some of those can be seen linked below or the whole blog can be viewed at <a href="https://blog.kassiopia.dev">https://blog.kassiopia.dev</a>
     - <a href="https://blog.kassiopia.dev/?p=177">SANS Holiday Hack 2024</a>
     - <a href="https://blog.kassiopia.dev/?p=164">TRS 80 Model 100</a>
@@ -139,7 +141,31 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
             </div>`,
         width: '580px',
         height: '375px'  // Match game dimensions
-    }
+    },
+    notepad: {
+        title: 'Untitled - Notepad',
+        content: `
+            <div class="notepad-container">
+                <div class="notepad-menu">
+                    <div class="menu-bar">
+                        <button>File</button>
+                        <button>Edit</button>
+                        <button>Format</button>
+                        <button>View</button>
+                        <button>Help</button>
+                    </div>
+                </div>
+                <div class="notepad-content">
+                    <div class="notepad-text">Just a quick update (04/16/25):
+- Still in Michigan, It's nice here.
+- Added this notepad window for displaying updates
+- Some new updates to the untitled game. We're approaching being able to test the game loop and see if this is even fun. Feels kinda cool
+</div>
+                </div>
+            </div>`,
+        width: '600px',
+        height: '400px'
+    },
 };
 
 function createOrFocusWindow(windowType) {
