@@ -157,7 +157,7 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
                 </div>
                 <div class="notepad-content">
                     <div class="notepad-text">
-0418/25:
+04/18/25:
 - Going to a concert tonight
 - The game is going well, NPCs are in now but we need to adjust the navmesh. It's almost time to actually start making the game loop and seeing if the idea is even fun to play.
 - I have glasses now which is nice
