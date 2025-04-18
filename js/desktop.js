@@ -156,7 +156,13 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
                     </div>
                 </div>
                 <div class="notepad-content">
-                    <div class="notepad-text">Just a quick update (04/16/25):
+                    <div class="notepad-text">
+0418/25:
+- Going to a concert tonight
+- The game is going well, NPCs are in now but we need to adjust the navmesh. It's almost time to actually start making the game loop and seeing if the idea is even fun to play.
+- I have glasses now which is nice
+- I wish I brought my camera with me, I miss taking photos.
+04/16/25:
 - Still in Michigan, It's nice here.
 - Added this notepad window for displaying updates
 - Some new updates to the untitled game. We're approaching being able to test the game loop and see if this is even fun. Feels kinda cool
