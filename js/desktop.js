@@ -157,6 +157,11 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
                 </div>
                 <div class="notepad-content">
                     <div class="notepad-text">
+05/17/25:
+- Long time no talk. Been packing I move in like 2 days.
+- Game progress slowed because of this which kinda blows. We still need to fix the nav-meshes and then start implimenting the actual game loop. I also think my code for culling the enemies after they die is broken so I need to look at that.
+- Tomorrow I've gotta go through and turn down all the services I have here. I also think I'm gonna unrack 2 of the servers since they just kinda sit on shelves. A bit worried about having to ship them with the drives inside but they made it here from Vermont fine so I'm rolling the dice.
+- Lastly, I fixed the photo order. Realized my numbering was all messed up and not showiung things correctly.
 04/18/25:
 - Going to a concert tonight
 - The game is going well, NPCs are in now but we need to adjust the navmesh. It's almost time to actually start making the game loop and seeing if the idea is even fun to play.
