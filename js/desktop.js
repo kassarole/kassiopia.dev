@@ -157,6 +157,14 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
                 </div>
                 <div class="notepad-content">
                     <div class="notepad-text">
+06/16/25:
+- Oops I forgot to update this for a month again. I moved.
+- Servers made it through the move which is great but my UPS died.
+- House is really coming together, we have a nice space for doing hardware projectgs now so maybe I'll have some of that to post soon
+- I want to start posting again and may just start blogging more in general. Anytime I go to write a like formal post tho it feels like it doesn't fit the vibe on my current blog site
+- Maybe I need to just move more things here instead. I had an idea for a new thing on this site so maybe I'll start on that after work today.
+- I also need to work more on AnimalChat and start making the frontend for that.
+- Hopefully more photos soon. Haven't been taking much lately tho mostly just cell phone stuff for my own memories.
 05/17/25:
 - Long time no talk. Been packing I move in like 2 days.
 - Game progress slowed because of this which kinda blows. We still need to fix the nav-meshes and then start implimenting the actual game loop. I also think my code for culling the enemies after they die is broken so I need to look at that.
