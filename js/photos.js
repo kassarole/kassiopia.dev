@@ -16,11 +16,11 @@ async function loadPhotos() {
         
         photos = data
             .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name))
+            .sort((a, b) => b.name.localeCompare(a.name))
             .map(file => ({
                 url: file.download_url,
                 name: file.name
-            }))
-            .reverse();
+            }));
         
         if (photos.length > 0) {
             displayPhoto(currentPhotoIndex);
