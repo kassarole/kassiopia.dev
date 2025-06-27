@@ -122,6 +122,7 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
 - Pinball game from <a href="https://alula.github.io/SpaceCadetPinball/" target="_blank">alula.github.io</a>
 - Spider Solitaire from <a href="https://games.gameboss.com/spidersolitairewindowsxp/index.html?lang=en" target="_blank">games.gameboss.com</a>
 - Built using <a href="https://botoxparty.github.io/XP.css/">xp.css</a>
+- Facenook inspired by <a href="http://emilyisaway.com/facenook/" target="_blank">Emily is Away <3 by Kyle Seely</a>
 </pre>`,
         width: '800px',
         height: '400px'  // Standard CMD height
@@ -142,48 +143,93 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
         width: '580px',
         height: '375px'  // Match game dimensions
     },
-    notepad: {
-        title: 'Untitled - Notepad',
+    facenook: {
+        title: 'Facenook - Kassiopia',
         content: `
-            <div class="notepad-container">
-                <div class="notepad-menu">
-                    <div class="menu-bar">
-                        <button>File</button>
-                        <button>Edit</button>
-                        <button>Format</button>
-                        <button>View</button>
-                        <button>Help</button>
+            <div class="facenook-container">
+                <div class="facenook-header">
+                    <img class="facenook-profile-pic" src="images/profile.png" alt="Profile Picture">
+                    <div class="facenook-profile-info">
+                        <h2>Kassiopia</h2>
+                        <span class="facenook-username">@kassarole</span>
                     </div>
                 </div>
-                <div class="notepad-content">
-                    <div class="notepad-text">
-06/16/25:
-- Oops I forgot to update this for a month again. I moved.
-- Servers made it through the move which is great but my UPS died.
-- House is really coming together, we have a nice space for doing hardware projectgs now so maybe I'll have some of that to post soon
-- I want to start posting again and may just start blogging more in general. Anytime I go to write a like formal post tho it feels like it doesn't fit the vibe on my current blog site
-- Maybe I need to just move more things here instead. I had an idea for a new thing on this site so maybe I'll start on that after work today.
-- I also need to work more on AnimalChat and start making the frontend for that.
-- Hopefully more photos soon. Haven't been taking much lately tho mostly just cell phone stuff for my own memories.
-05/17/25:
-- Long time no talk. Been packing I move in like 2 days.
-- Game progress slowed because of this which kinda blows. We still need to fix the nav-meshes and then start implimenting the actual game loop. I also think my code for culling the enemies after they die is broken so I need to look at that.
-- Tomorrow I've gotta go through and turn down all the services I have here. I also think I'm gonna unrack 2 of the servers since they just kinda sit on shelves. A bit worried about having to ship them with the drives inside but they made it here from Vermont fine so I'm rolling the dice.
-- Lastly, I fixed the photo order. Realized my numbering was all messed up and not showiung things correctly.
-04/18/25:
-- Going to a concert tonight
-- The game is going well, NPCs are in now but we need to adjust the navmesh. It's almost time to actually start making the game loop and seeing if the idea is even fun to play.
-- I have glasses now which is nice
-- I wish I brought my camera with me, I miss taking photos.
-04/16/25:
-- Still in Michigan, It's nice here.
-- Added this notepad window for displaying updates
-- Some new updates to the untitled game. We're approaching being able to test the game loop and see if this is even fun. Feels kinda cool
-</div>
+                <div class="facenook-nav">
+                    <button>Wall</button>
+                    <button>Info</button>
+                    <button>Photos</button>
+                    <button>Friends</button>
                 </div>
-            </div>`,
-        width: '600px',
-        height: '400px'
+                <div class="facenook-status-update">
+                    <input type="text" placeholder="What's on your mind, Kassiopia?" disabled>
+                    <button disabled>Post</button>
+                </div>
+                <div class="facenook-timeline">
+                    <div class="facenook-post">
+                        <div class="facenook-post-header">
+                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                            <div>
+                                <span class="facenook-post-author">Kassiopia</span>
+                                <span class="facenook-post-date">June 27, 2025</span>
+                            </div>
+                        </div>
+                        <div class="facenook-post-content">
+                            I took some new photos! There's like 10 birds nests in the tree outside my new place and I was able to get some photos of them that I'm happy with. I also finally updated the old notepad view of these notes into something I hope is more aesthically pleasing. Emily is Away is probably one of the most important games/series to me up with VA-11 Hall-A and If Found (Play all of these if you haven't). I think I'll probably end up moving my photos, projects, and about sections here too but I need to plan the layouts for those pages still. There's still one more big thing I want to add to this site but I'm still working on that part so uhh stay tuned. I'm also working on some larger blog posts for my main blog but progress there has been kinda slow. Generally it feels good to be posting again and hopefully I can get a regualr cadence going. We'll see how that all shakes out.
+                        </div>
+                    </div>
+                    <div class="facenook-post">
+                        <div class="facenook-post-header">
+                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                            <div>
+                                <span class="facenook-post-author">Kassiopia</span>
+                                <span class="facenook-post-date">June 16, 2025</span>
+                            </div>
+                        </div>
+                        <div class="facenook-post-content">
+                            Oops I forgot to update this for a month again. I moved! Servers made it through the move which is great but my UPS died. House is really coming together, we have a nice space for hardware projects now. I want to start posting again and may just start blogging more in general. Maybe I need to just move more things here instead. I had an idea for a new thing on this site so maybe I'll start on that after work today. Also need to work more on AnimalChat and start making the frontend for that. Hopefully more photos soon!
+                        </div>
+                    </div>
+                    <div class="facenook-post">
+                        <div class="facenook-post-header">
+                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                            <div>
+                                <span class="facenook-post-author">Kassiopia</span>
+                                <span class="facenook-post-date">May 17, 2025</span>
+                            </div>
+                        </div>
+                        <div class="facenook-post-content">
+                            Long time no talk. Been packing, I move in like 2 days. Game progress slowed because of this which kinda blows. We still need to fix the nav-meshes and then start implementing the actual game loop. Also think my code for culling the enemies after they die is broken so I need to look at that. Tomorrow I've gotta go through and turn down all the services I have here. Also think I'm gonna unrack 2 of the servers since they just kinda sit on shelves. A bit worried about having to ship them with the drives inside but they made it here from Vermont fine so I'm rolling the dice. Lastly, I fixed the photo order!
+                        </div>
+                    </div>
+                    <div class="facenook-post">
+                        <div class="facenook-post-header">
+                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                            <div>
+                                <span class="facenook-post-author">Kassiopia</span>
+                                <span class="facenook-post-date">April 18, 2025</span>
+                            </div>
+                        </div>
+                        <div class="facenook-post-content">
+                            Going to a concert tonight! The game is going well, NPCs are in now but we need to adjust the navmesh. It's almost time to actually start making the game loop and see if the idea is even fun to play. I have glasses now which is nice. I wish I brought my camera with me, I miss taking photos.
+                        </div>
+                    </div>
+                    <div class="facenook-post">
+                        <div class="facenook-post-header">
+                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                            <div>
+                                <span class="facenook-post-author">Kassiopia</span>
+                                <span class="facenook-post-date">April 16, 2025</span>
+                            </div>
+                        </div>
+                        <div class="facenook-post-content">
+                            Still in Michigan, It's nice here. Added this notepad window for displaying updates. Some new updates to the untitled game. We're approaching being able to test the game loop and see if this is even fun. Feels kinda cool!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `,
+        width: '650px',
+        height: '500px'
     },
 };
 

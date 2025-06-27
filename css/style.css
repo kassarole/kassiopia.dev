@@ -693,3 +693,106 @@ body {
     word-wrap: break-word;
     color: #000;
 }
+/* Add to your CSS file */
+.facenook-container {
+    font-family: 'Tahoma', Arial, sans-serif;
+    background: #e9ebee;
+    border-radius: 6px;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+.facenook-header {
+    display: flex;
+    align-items: center;
+    background: #3b5998;
+    color: #fff;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+}
+.facenook-profile-pic {
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    margin-right: 16px;
+    border: 2px solid #fff;
+}
+.facenook-profile-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+.facenook-username {
+    font-size: 0.95em;
+    color: #dfe3ee;
+}
+.facenook-nav {
+    display: flex;
+    gap: 8px;
+    background: #fff;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.facenook-nav button {
+    background: #f5f6f7;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #3b5998;
+    font-weight: bold;
+    cursor: pointer;
+}
+.facenook-status-update {
+    background: #fff;
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 8px;
+}
+.facenook-status-update input {
+    flex: 1;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccd0d5;
+}
+.facenook-status-update button {
+    background: #3b5998;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+.facenook-timeline {
+    padding: 16px;
+}
+.facenook-post {
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    padding: 12px;
+}
+.facenook-post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.facenook-post-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+.facenook-post-author {
+    font-weight: bold;
+    color: #3b5998;
+}
+.facenook-post-date {
+    display: block;
+    font-size: 0.85em;
+    color: #90949c;
+}
+.facenook-post-content {
+    font-size: 1em;
+    color: #1c1e21;
+}
