@@ -19,7 +19,8 @@ async function loadPhotos() {
             .map(file => ({
                 url: file.download_url,
                 name: file.name
-            }));
+            }))
+            .reverse();
         
         if (photos.length > 0) {
             displayPhoto(currentPhotoIndex);
