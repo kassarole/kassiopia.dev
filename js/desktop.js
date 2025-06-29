@@ -174,6 +174,18 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
                             </div>
                         </div>
                         <div class="facenook-post-content">
+                        New major feature thing added! The chat room should allow anyone who happens to visit to set a nickname and chat with anybody else here. It's kinda basic right now but I may add more to it later. GF and I have also been working on hardware type stuff again. I ordered some PCBs for a project last night, first time ever designing one and I'm terrified I did something wrong but no real way to tell until they get here. I also went and saw The Phonecian Scheme tonight. Loved it highly recommend. Next major thing will be the upgrades to this part of the site I talked about in the below post.
+                        </div>
+                    </div>
+                    <div class="facenook-post">
+                        <div class="facenook-post-header">
+                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                            <div>
+                                <span class="facenook-post-author">Kassiopia</span>
+                                <span class="facenook-post-date">June 27, 2025</span>
+                            </div>
+                        </div>
+                        <div class="facenook-post-content">
                             I took some new photos! There's like 10 birds nests in the tree outside my new place and I was able to get some photos of them that I'm happy with. I also finally updated the old notepad view of these notes into something I hope is more aesthically pleasing. Emily is Away is probably one of the most important games/series to me up with VA-11 Hall-A and If Found (Play all of these if you haven't). I think I'll probably end up moving my photos, projects, and about sections here too but I need to plan the layouts for those pages still. There's still one more big thing I want to add to this site but I'm still working on that part so uhh stay tuned. I'm also working on some larger blog posts for my main blog but progress there has been kinda slow. Generally it feels good to be posting again and hopefully I can get a regualr cadence going. We'll see how that all shakes out.
                         </div>
                     </div>
@@ -231,6 +243,24 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
         width: '650px',
         height: '500px'
     },
+    aolchat: {
+        title: 'Chat Room',
+        content: `
+            <div class="aol-chatbox">
+                <div class="aol-chat-header">
+                    <img src="images/aim-buddy.png" alt="AIM Buddy">
+                    Chat Room
+                </div>
+                <div class="aol-chat-messages" id="aol-chat-messages"></div>
+                <div class="aol-chat-input-row">
+                    <input type="text" id="aol-chat-input" placeholder="Type a message..." maxlength="200" />
+                    <button id="aol-chat-send">Send</button>
+                </div>
+            </div>
+        `,
+        width: '350px',
+        height: '400px'
+    },
 };
 
 function createOrFocusWindow(windowType) {
@@ -272,8 +302,9 @@ function createOrFocusWindow(windowType) {
         setTimeout(() => initializePhotoViewer(windowEl), 0);
     } else if (windowType === 'pinball') {
         setTimeout(() => initializePinball(windowEl), 0);
+    } else if (windowType === 'aolchat') {
+        setTimeout(() => initializeAOLChat(windowEl), 0);
     }
-
     focusWindow(windowEl);
     return windowEl;
 }
