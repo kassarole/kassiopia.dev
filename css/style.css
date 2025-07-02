@@ -922,3 +922,136 @@ body {
     white-space: pre-line;
     word-break: break-word;
 }
+
+/* Facenook Profile Info (Profile Page Style) */
+.facenook-info {
+    background: #f0f2f5;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 !important;
+}
+
+.facenook-profile-content {
+    max-width: 650px;
+    margin: 32px auto;
+    background: #fff;
+    border: 1px solid #ccd0d5;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 32px 32px 24px 32px;
+}
+
+.facenook-profile-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.facenook-profile-pic-large {
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+    border: 2px solid #4267b2;
+    background: #fff;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.facenook-profile-details {
+    flex: 1;
+}
+
+.facenook-profile-details h2 {
+    margin: 0 0 8px 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #1c1e21;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.facenook-profile-details .facenook-username {
+    color: #4267b2;
+    font-size: 0.7em;
+    font-weight: normal;
+    margin-left: 8px;
+}
+
+.facenook-profile-details p {
+    margin: 0 0 18px 0;
+    color: #222;
+    font-size: 1.1em;
+}
+
+.facenook-profile-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.facenook-profile-links li {
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.facenook-profile-links a {
+    color: #385898;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.facenook-profile-links a:hover {
+    text-decoration: underline;
+}
+
+.facenook-profile-section {
+    margin-bottom: 28px;
+}
+
+.facenook-profile-section h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.2em;
+    color: #385898;
+    font-weight: bold;
+    border-bottom: 1px solid #e4e6eb;
+    padding-bottom: 4px;
+}
+
+.facenook-project-list,
+.facenook-blog-list {
+    list-style: disc inside;
+    margin: 0 0 0 12px;
+    padding: 0;
+}
+
+.facenook-project-list li,
+.facenook-blog-list li {
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.facenook-project-list a,
+.facenook-blog-list a {
+    color: #385898;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.facenook-project-list a:hover,
+.facenook-blog-list a:hover {
+    text-decoration: underline;
+}
+
+.facenook-blog-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #4267b2;
+    text-decoration: none;
+}
+
+.facenook-blog-link:hover {
+    text-decoration: underline;
+}

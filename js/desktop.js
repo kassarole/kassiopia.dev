@@ -13,47 +13,6 @@ const windowTemplates = {
         width: '800px',
         height: '400px'  // Standard CMD height
     },
-    about: {
-        title: 'Command Prompt',
-        content: `
-                <pre class="command-prompt">Microsoft Windows XP [Version 5.1.2600] 
-&#10094;C&#10095; Copyright 1985-2001 Microsoft Corp.
-<br>C:&#92;WINDOWS&#92;SYSTEM32> TYPE ABOUT.TXT
-
-Hiya I'm Kassiopia. I'm a former mobile forensics researcher currently working as a cloud engineer. I spend a lot of time traveling and have an active interest in photography and vintage tech.          
-<br>You can also find me here:
-- Twitter: <a href="https://twitter.com/_kassarole" target="_blank">@_kassarole</a>
-- Bluesky: <a href="https://bsky.app/profile/fauxkassarole.bsky.social" target="_blank">@fauxkassarole.bsky.social</a>
-- Tumblr: <a href="https://fauxkassarole.tumblr.com" target="_blank">fauxkassarole.tumblr.com</a>
-- Blog: <a href="https://blog.kassiopia.dev" target="_blank">blog.kassiopia.dev</a></pre>`,
-        width: '800px',
-        height: '400px'  // Same as command
-    },
-    projects: {
-        title: 'Command Prompt',
-        content: `
-            <pre class="command-prompt">Microsoft Windows XP [Version 5.1.2600] 
-&#10094;C&#10095; Copyright 1985-2001 Microsoft Corp.
-      <br>C:&#92;WINDOWS&#92;SYSTEM32> TYPE PROJECTS.TXT
-      
-From time to time I like to release the utilities I've written. These can be found below:          
-- <a href="https://git.basedzone.xyz/kass/music-organizer" target="_blank">Music Organizer</a>
-    - This is a python script for automatically identifying and organizing music downloaded with <a href="https://github.com/spotDL/spotify-downloader">SpotDL</a>.
-- <a href="https://git.basedzone.xyz/kass/ebook-downloader" target="_blank">eBook Downloader</a>
-    - This is a python script for searching for and then downloading books from libgen. It has a simple web UI and a CLI version.
-- <a href="https://git.basedzone.xyz/kass/MVIMG_Carving" target="_blank">MVIMG Carving</a>
-    - This is a python script for extracting the video segments from Android Motion Videos (Android version of Live Photos).
-- Untitled Game Project
-    - Not much to say about this right now. I'm working on it with my partner and may have little screenshots and notes to share about it.
-I  also occasionally post blog posts. Some of those can be seen linked below or the whole blog can be viewed at <a href="https://blog.kassiopia.dev">https://blog.kassiopia.dev</a>
-    - <a href="https://blog.kassiopia.dev/?p=177">SANS Holiday Hack 2024</a>
-    - <a href="https://blog.kassiopia.dev/?p=164">TRS 80 Model 100</a>
-    - <a href="https://blog.kassiopia.dev/?p=105">SANS Holiday Hack 2023</a>
-    - <a href="https://blog.kassiopia.dev/?p=27">Ersatz TV Setup Guide</a>
-    </pre>`,
-        width: '800px',
-        height: '600px'  // Taller for more content
-    },
     photos: {
         title: 'Windows Picture and Fax Viewer',
         content: `
@@ -146,103 +105,166 @@ I  also occasionally post blog posts. Some of those can be seen linked below or 
     facenook: {
         title: 'Facenook - Kassiopia',
         content: `
-            <div class="facenook-container">
-                <div class="facenook-header">
-                    <img class="facenook-profile-pic" src="images/profile.png" alt="Profile Picture">
-                    <div class="facenook-profile-info">
-                        <h2>Kassiopia</h2>
-                        <span class="facenook-username">@kassarole</span>
+        <div class="facenook-container">
+            <div class="facenook-header">
+                <img class="facenook-profile-pic" src="images/profile.png" alt="Profile Picture">
+                <div class="facenook-profile-info">
+                    <h2>Kassiopia</h2>
+                    <span class="facenook-username">@kassarole</span>
+                </div>
+            </div>
+            <div class="facenook-nav">
+                <button data-tab="wall" class="active">Wall</button>
+                <button data-tab="info">Info</button>
+            </div>
+            <div class="facenook-status-update" data-tab-content="wall">
+                <input type="text" placeholder="What's on your mind, Kassiopia?" disabled>
+                <button disabled>Post</button>
+            </div>
+            <div class="facenook-timeline" data-tab-content="wall">
+                <div class="facenook-post">
+                    <div class="facenook-post-header">
+                        <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                        <div>
+                            <span class="facenook-post-author">Kassiopia</span>
+                            <span class="facenook-post-date">July 2, 2025</span>
+                        </div>
+                    </div>
+                    <div class="facenook-post-content">
+                    Info tab is added and I'm removing the old about and projects buttons in favor of it. I ended up not moving photos because I still like the old viewer and I don't want this site to just all be on this one item. I like having a few distinct apps you open to view different things. On other projects, I've started migrating more things to nixos. I'm liking it so far and using flakes has made deployment a lot simpler. Might write a blog or something about it soon who knows.
                     </div>
                 </div>
-                <div class="facenook-nav">
-                    <button>Wall</button>
-                    <button>Info</button>
-                    <button>Photos</button>
-                    <button>Friends</button>
+                <div class="facenook-post">
+                    <div class="facenook-post-header">
+                        <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                        <div>
+                            <span class="facenook-post-author">Kassiopia</span>
+                            <span class="facenook-post-date">June 27, 2025</span>
+                        </div>
+                    </div>
+                    <div class="facenook-post-content">
+                    New major feature thing added! The chat room should allow anyone who happens to visit to set a nickname and chat with anybody else here. It's kinda basic right now but I may add more to it later. GF and I have also been working on hardware type stuff again. I ordered some PCBs for a project last night, first time ever designing one and I'm terrified I did something wrong but no real way to tell until they get here. I also went and saw The Phonecian Scheme tonight. Loved it highly recommend. Next major thing will be the upgrades to this part of the site I talked about in the below post.
+                    </div>
                 </div>
-                <div class="facenook-status-update">
-                    <input type="text" placeholder="What's on your mind, Kassiopia?" disabled>
-                    <button disabled>Post</button>
+                <div class="facenook-post">
+                    <div class="facenook-post-header">
+                        <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                        <div>
+                            <span class="facenook-post-author">Kassiopia</span>
+                            <span class="facenook-post-date">June 27, 2025</span>
+                        </div>
+                    </div>
+                    <div class="facenook-post-content">
+                        I took some new photos! There's like 10 birds nests in the tree outside my new place and I was able to get some photos of them that I'm happy with. I also finally updated the old notepad view of these notes into something I hope is more aesthically pleasing. Emily is Away is probably one of the most important games/series to me up with VA-11 Hall-A and If Found (Play all of these if you haven't). I think I'll probably end up moving my photos, projects, and about sections here too but I need to plan the layouts for those pages still. There's still one more big thing I want to add to this site but I'm still working on that part so uhh stay tuned. I'm also working on some larger blog posts for my main blog but progress there has been kinda slow. Generally it feels good to be posting again and hopefully I can get a regualr cadence going. We'll see how that all shakes out.
+                    </div>
                 </div>
-                <div class="facenook-timeline">
-                    <div class="facenook-post">
-                        <div class="facenook-post-header">
-                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
-                            <div>
-                                <span class="facenook-post-author">Kassiopia</span>
-                                <span class="facenook-post-date">June 27, 2025</span>
-                            </div>
-                        </div>
-                        <div class="facenook-post-content">
-                        New major feature thing added! The chat room should allow anyone who happens to visit to set a nickname and chat with anybody else here. It's kinda basic right now but I may add more to it later. GF and I have also been working on hardware type stuff again. I ordered some PCBs for a project last night, first time ever designing one and I'm terrified I did something wrong but no real way to tell until they get here. I also went and saw The Phonecian Scheme tonight. Loved it highly recommend. Next major thing will be the upgrades to this part of the site I talked about in the below post.
+                <div class="facenook-post">
+                    <div class="facenook-post-header">
+                        <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                        <div>
+                            <span class="facenook-post-author">Kassiopia</span>
+                            <span class="facenook-post-date">June 16, 2025</span>
                         </div>
                     </div>
-                    <div class="facenook-post">
-                        <div class="facenook-post-header">
-                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
-                            <div>
-                                <span class="facenook-post-author">Kassiopia</span>
-                                <span class="facenook-post-date">June 27, 2025</span>
-                            </div>
-                        </div>
-                        <div class="facenook-post-content">
-                            I took some new photos! There's like 10 birds nests in the tree outside my new place and I was able to get some photos of them that I'm happy with. I also finally updated the old notepad view of these notes into something I hope is more aesthically pleasing. Emily is Away is probably one of the most important games/series to me up with VA-11 Hall-A and If Found (Play all of these if you haven't). I think I'll probably end up moving my photos, projects, and about sections here too but I need to plan the layouts for those pages still. There's still one more big thing I want to add to this site but I'm still working on that part so uhh stay tuned. I'm also working on some larger blog posts for my main blog but progress there has been kinda slow. Generally it feels good to be posting again and hopefully I can get a regualr cadence going. We'll see how that all shakes out.
+                    <div class="facenook-post-content">
+                        Oops I forgot to update this for a month again. I moved! Servers made it through the move which is great but my UPS died. House is really coming together, we have a nice space for hardware projects now. I want to start posting again and may just start blogging more in general. Maybe I need to just move more things here instead. I had an idea for a new thing on this site so maybe I'll start on that after work today. Also need to work more on AnimalChat and start making the frontend for that. Hopefully more photos soon!
+                    </div>
+                </div>
+                <div class="facenook-post">
+                    <div class="facenook-post-header">
+                        <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                        <div>
+                            <span class="facenook-post-author">Kassiopia</span>
+                            <span class="facenook-post-date">May 17, 2025</span>
                         </div>
                     </div>
-                    <div class="facenook-post">
-                        <div class="facenook-post-header">
-                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
-                            <div>
-                                <span class="facenook-post-author">Kassiopia</span>
-                                <span class="facenook-post-date">June 16, 2025</span>
-                            </div>
-                        </div>
-                        <div class="facenook-post-content">
-                            Oops I forgot to update this for a month again. I moved! Servers made it through the move which is great but my UPS died. House is really coming together, we have a nice space for hardware projects now. I want to start posting again and may just start blogging more in general. Maybe I need to just move more things here instead. I had an idea for a new thing on this site so maybe I'll start on that after work today. Also need to work more on AnimalChat and start making the frontend for that. Hopefully more photos soon!
+                    <div class="facenook-post-content">
+                        Long time no talk. Been packing, I move in like 2 days. Game progress slowed because of this which kinda blows. We still need to fix the nav-meshes and then start implementing the actual game loop. Also think my code for culling the enemies after they die is broken so I need to look at that. Tomorrow I've gotta go through and turn down all the services I have here. Also think I'm gonna unrack 2 of the servers since they just kinda sit on shelves. A bit worried about having to ship them with the drives inside but they made it here from Vermont fine so I'm rolling the dice. Lastly, I fixed the photo order!
+                    </div>
+                </div>
+                <div class="facenook-post">
+                    <div class="facenook-post-header">
+                        <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                        <div>
+                            <span class="facenook-post-author">Kassiopia</span>
+                            <span class="facenook-post-date">April 18, 2025</span>
                         </div>
                     </div>
-                    <div class="facenook-post">
-                        <div class="facenook-post-header">
-                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
-                            <div>
-                                <span class="facenook-post-author">Kassiopia</span>
-                                <span class="facenook-post-date">May 17, 2025</span>
-                            </div>
-                        </div>
-                        <div class="facenook-post-content">
-                            Long time no talk. Been packing, I move in like 2 days. Game progress slowed because of this which kinda blows. We still need to fix the nav-meshes and then start implementing the actual game loop. Also think my code for culling the enemies after they die is broken so I need to look at that. Tomorrow I've gotta go through and turn down all the services I have here. Also think I'm gonna unrack 2 of the servers since they just kinda sit on shelves. A bit worried about having to ship them with the drives inside but they made it here from Vermont fine so I'm rolling the dice. Lastly, I fixed the photo order!
+                    <div class="facenook-post-content">
+                        Going to a concert tonight! The game is going well, NPCs are in now but we need to adjust the navmesh. It's almost time to actually start making the game loop and see if the idea is even fun to play. I have glasses now which is nice. I wish I brought my camera with me, I miss taking photos.
+                    </div>
+                </div>
+                <div class="facenook-post">
+                    <div class="facenook-post-header">
+                        <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                        <div>
+                            <span class="facenook-post-author">Kassiopia</span>
+                            <span class="facenook-post-date">April 16, 2025</span>
                         </div>
                     </div>
-                    <div class="facenook-post">
-                        <div class="facenook-post-header">
-                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
-                            <div>
-                                <span class="facenook-post-author">Kassiopia</span>
-                                <span class="facenook-post-date">April 18, 2025</span>
-                            </div>
-                        </div>
-                        <div class="facenook-post-content">
-                            Going to a concert tonight! The game is going well, NPCs are in now but we need to adjust the navmesh. It's almost time to actually start making the game loop and see if the idea is even fun to play. I have glasses now which is nice. I wish I brought my camera with me, I miss taking photos.
-                        </div>
-                    </div>
-                    <div class="facenook-post">
-                        <div class="facenook-post-header">
-                            <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
-                            <div>
-                                <span class="facenook-post-author">Kassiopia</span>
-                                <span class="facenook-post-date">April 16, 2025</span>
-                            </div>
-                        </div>
-                        <div class="facenook-post-content">
-                            Still in Michigan, It's nice here. Added this notepad window for displaying updates. Some new updates to the untitled game. We're approaching being able to test the game loop and see if this is even fun. Feels kinda cool!
-                        </div>
+                    <div class="facenook-post-content">
+                        Still in Michigan, It's nice here. Added this notepad window for displaying updates. Some new updates to the untitled game. We're approaching being able to test the game loop and see if this is even fun. Feels kinda cool!
                     </div>
                 </div>
             </div>
-        `,
-        width: '650px',
-        height: '500px'
-    },
+            <div class="facenook-info" data-tab-content="info" style="display:none;">
+    <div class="facenook-profile-content">
+        <div class="facenook-profile-main">
+            <img class="facenook-profile-pic-large" src="images/profile.png" alt="Profile Picture">
+            <div class="facenook-profile-details">
+                <h2>Kassiopia <span class="facenook-username">@kassarole</span></h2>
+                <p>
+                    Former mobile forensics researcher, now a cloud engineer.<br>
+                    Traveler, photographer, and vintage tech enthusiast.
+                </p>
+                <ul class="facenook-profile-links">
+                    <li><strong>Twitter:</strong> <a href="https://twitter.com/_kassarole" target="_blank">@_kassarole</a></li>
+                    <li><strong>Bluesky:</strong> <a href="https://bsky.app/profile/fauxkassarole.bsky.social" target="_blank">@fauxkassarole.bsky.social</a></li>
+                    <li><strong>Tumblr:</strong> <a href="https://fauxkassarole.tumblr.com" target="_blank">fauxkassarole.tumblr.com</a></li>
+                    <li><strong>Blog:</strong> <a href="https://blog.kassiopia.dev" target="_blank">blog.kassiopia.dev</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="facenook-profile-section">
+            <h3>Projects</h3>
+            <ul class="facenook-project-list">
+                <li>
+                    <a href="https://git.basedzone.xyz/kass/music-organizer" target="_blank"><strong>Music Organizer</strong></a> – Python script for organizing music downloaded with SpotDL.
+                </li>
+                <li>
+                    <a href="https://git.basedzone.xyz/kass/ebook-downloader" target="_blank"><strong>eBook Downloader</strong></a> – Python script for searching/downloading books from libgen (web UI & CLI).
+                </li>
+                <li>
+                    <a href="https://git.basedzone.xyz/kass/MVIMG_Carving" target="_blank"><strong>MVIMG Carving</strong></a> – Extracts video segments from Android Motion Photos.
+                </li>
+                <li>
+                    <strong>Untitled Game Project</strong> – In development with my partner. More info soon!
+                </li>
+            </ul>
+        </div>
+        <div class="facenook-profile-section">
+            <h3>Recent Blog Posts</h3>
+            <ul class="facenook-blog-list">
+                <li><a href="https://blog.kassiopia.dev/?p=177" target="_blank">SANS Holiday Hack 2024</a></li>
+                <li><a href="https://blog.kassiopia.dev/?p=164" target="_blank">TRS 80 Model 100</a></li>
+                <li><a href="https://blog.kassiopia.dev/?p=105" target="_blank">SANS Holiday Hack 2023</a></li>
+                <li><a href="https://blog.kassiopia.dev/?p=27" target="_blank">Ersatz TV Setup Guide</a></li>
+            </ul>
+            <a href="https://blog.kassiopia.dev" target="_blank" class="facenook-blog-link">View all blog posts</a>
+        </div>
+    </div>
+</div>
+            <div class="facenook-photos" data-tab-content="photos" style="display:none; padding:16px;">
+                <p>Photo gallery coming soon!</p>
+            </div>
+            <div class="facenook-friends" data-tab-content="friends" style="display:none; padding:16px;">
+                <p>Friends list coming soon!</p>
+            </div>
+        </div>
+    `,
+    width: '650px',
+    height: '500px'
+},
     aolchat: {
         title: 'Chat Room',
         content: `
@@ -304,6 +326,8 @@ function createOrFocusWindow(windowType) {
         setTimeout(() => initializePinball(windowEl), 0);
     } else if (windowType === 'aolchat') {
         setTimeout(() => initializeAOLChat(windowEl), 0);
+    } else if (windowType === 'facenook') {
+        setTimeout(() => initializeFacenookTabs(windowEl), 0);
     }
     focusWindow(windowEl);
     return windowEl;
@@ -607,6 +631,27 @@ function initializePinball(windowEl) {
     const iframe = windowEl.querySelector('iframe');
     iframe.addEventListener('load', () => {
         iframe.contentWindow.focus();
+    });
+}
+
+function initializeFacenookTabs(windowEl) {
+    const navButtons = windowEl.querySelectorAll('.facenook-nav button');
+    const tabContents = windowEl.querySelectorAll('[data-tab-content]');
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active from all buttons
+            navButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            // Show/hide tab contents
+            const tab = btn.getAttribute('data-tab');
+            tabContents.forEach(content => {
+                if (content.getAttribute('data-tab-content') === tab) {
+                    content.style.display = '';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        });
     });
 }
 
