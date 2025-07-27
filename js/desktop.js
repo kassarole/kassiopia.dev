@@ -60,8 +60,8 @@ const windowTemplates = {
                 <span id="photo-name">Loading...</span>
             </div>
         </div>`,
-        width: '750px',  // Updated width
-        height: '550px'  // Updated height to match XP photo viewer
+        width: '750px',
+        height: '550px'
     },
     pinball: {
         title: 'Space Cadet Pinball',
@@ -70,7 +70,7 @@ const windowTemplates = {
             <iframe src="https://alula.github.io/SpaceCadetPinball/" title="Pinball Game" allowfullscreen></iframe>
             </div>`,
         width: '616px',
-        height: '500px'  // Match game dimensions
+        height: '500px'
     },
     credits: {
         title: 'Credits',
@@ -84,7 +84,7 @@ const windowTemplates = {
 - Facenook inspired by <a href="http://emilyisaway.com/facenook/" target="_blank">Emily is Away <3 by Kyle Seely</a>
 </pre>`,
         width: '800px',
-        height: '400px'  // Standard CMD height
+        height: '400px'
     },
     spider: {
         title: 'Spider Solitaire',
@@ -100,7 +100,7 @@ const windowTemplates = {
                 </iframe>
             </div>`,
         width: '580px',
-        height: '375px'  // Match game dimensions
+        height: '375px'
     },
     facenook: {
         title: 'Facenook - Kassiopia',
@@ -134,7 +134,6 @@ const windowTemplates = {
                     I've been hard at work on a handful of new projects. I've started migrating all of my homelab hosts over to NixOS and I think I'll probably write a full blog about the process. I've also been trying to learn PCB design. I built a simple carrier board for an unreleased project that I should hopefully be able to publish soon and, over the past weekend, I designed my first full board. I'm still waiting for the full pricing back on what it'll cost to manufacture. I'd still like to get back to game development but there's only so much time in the day. Fingers crossed I can free up some more time for that soon. I also have a few more ideas for things to add here to this site but I've also been worried this site is starting to become a bit of a pain to navigate. I still enjoy the design but I've been debating moving it to a subdomain and writing a more simple and text focussed site as the main page. Still unsure what's better.
                     </div>
                 </div>
-            <div class="facenook-timeline" data-tab-content="wall">
                 <div class="facenook-post">
                     <div class="facenook-post-header">
                         <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
@@ -221,52 +220,52 @@ const windowTemplates = {
                 </div>
             </div>
             <div class="facenook-info" data-tab-content="info" style="display:none;">
-    <div class="facenook-profile-content">
-        <div class="facenook-profile-main">
-            <img class="facenook-profile-pic-large" src="images/profile.png" alt="Profile Picture">
-            <div class="facenook-profile-details">
-                <h2>Kassiopia <span class="facenook-username">@kassarole</span></h2>
-                <p>
-                    Former mobile forensics researcher, now a cloud engineer.<br>
-                    Traveler, photographer, and vintage tech enthusiast.
-                </p>
-                <ul class="facenook-profile-links">
-                    <li><strong>Twitter:</strong> <a href="https://twitter.com/_kassarole" target="_blank">@_kassarole</a></li>
-                    <li><strong>Bluesky:</strong> <a href="https://bsky.app/profile/fauxkassarole.bsky.social" target="_blank">@fauxkassarole.bsky.social</a></li>
-                    <li><strong>Tumblr:</strong> <a href="https://fauxkassarole.tumblr.com" target="_blank">fauxkassarole.tumblr.com</a></li>
-                    <li><strong>Blog:</strong> <a href="https://blog.kassiopia.dev" target="_blank">blog.kassiopia.dev</a></li>
-                </ul>
+                <div class="facenook-profile-content">
+                    <div class="facenook-profile-main">
+                        <img class="facenook-profile-pic-large" src="images/profile.png" alt="Profile Picture">
+                        <div class="facenook-profile-details">
+                            <h2>Kassiopia <span class="facenook-username">@kassarole</span></h2>
+                            <p>
+                                Former mobile forensics researcher, now a cloud engineer.<br>
+                                Traveler, photographer, and vintage tech enthusiast.
+                            </p>
+                            <ul class="facenook-profile-links">
+                                <li><strong>Twitter:</strong> <a href="https://twitter.com/_kassarole" target="_blank">@_kassarole</a></li>
+                                <li><strong>Bluesky:</strong> <a href="https://bsky.app/profile/fauxkassarole.bsky.social" target="_blank">@fauxkassarole.bsky.social</a></li>
+                                <li><strong>Tumblr:</strong> <a href="https://fauxkassarole.tumblr.com" target="_blank">fauxkassarole.tumblr.com</a></li>
+                                <li><strong>Blog:</strong> <a href="https://blog.kassiopia.dev" target="_blank">blog.kassiopia.dev</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="facenook-profile-section">
+                        <h3>Projects</h3>
+                        <ul class="facenook-project-list">
+                            <li>
+                                <a href="https://git.basedzone.xyz/kass/music-organizer" target="_blank"><strong>Music Organizer</strong></a> – Python script for organizing music downloaded with SpotDL.
+                            </li>
+                            <li>
+                                <a href="https://git.basedzone.xyz/kass/ebook-downloader" target="_blank"><strong>eBook Downloader</strong></a> – Python script for searching/downloading books from libgen (web UI & CLI).
+                            </li>
+                            <li>
+                                <a href="https://git.basedzone.xyz/kass/MVIMG_Carving" target="_blank"><strong>MVIMG Carving</strong></a> – Extracts video segments from Android Motion Photos.
+                            </li>
+                            <li>
+                                <strong>Untitled Game Project</strong> – In development with my partner. More info soon!
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="facenook-profile-section">
+                        <h3>Recent Blog Posts</h3>
+                        <ul class="facenook-blog-list">
+                            <li><a href="https://blog.kassiopia.dev/?p=177" target="_blank">SANS Holiday Hack 2024</a></li>
+                            <li><a href="https://blog.kassiopia.dev/?p=164" target="_blank">TRS 80 Model 100</a></li>
+                            <li><a href="https://blog.kassiopia.dev/?p=105" target="_blank">SANS Holiday Hack 2023</a></li>
+                            <li><a href="https://blog.kassiopia.dev/?p=27" target="_blank">Ersatz TV Setup Guide</a></li>
+                        </ul>
+                        <a href="https://blog.kassiopia.dev" target="_blank" class="facenook-blog-link">View all blog posts</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="facenook-profile-section">
-            <h3>Projects</h3>
-            <ul class="facenook-project-list">
-                <li>
-                    <a href="https://git.basedzone.xyz/kass/music-organizer" target="_blank"><strong>Music Organizer</strong></a> – Python script for organizing music downloaded with SpotDL.
-                </li>
-                <li>
-                    <a href="https://git.basedzone.xyz/kass/ebook-downloader" target="_blank"><strong>eBook Downloader</strong></a> – Python script for searching/downloading books from libgen (web UI & CLI).
-                </li>
-                <li>
-                    <a href="https://git.basedzone.xyz/kass/MVIMG_Carving" target="_blank"><strong>MVIMG Carving</strong></a> – Extracts video segments from Android Motion Photos.
-                </li>
-                <li>
-                    <strong>Untitled Game Project</strong> – In development with my partner. More info soon!
-                </li>
-            </ul>
-        </div>
-        <div class="facenook-profile-section">
-            <h3>Recent Blog Posts</h3>
-            <ul class="facenook-blog-list">
-                <li><a href="https://blog.kassiopia.dev/?p=177" target="_blank">SANS Holiday Hack 2024</a></li>
-                <li><a href="https://blog.kassiopia.dev/?p=164" target="_blank">TRS 80 Model 100</a></li>
-                <li><a href="https://blog.kassiopia.dev/?p=105" target="_blank">SANS Holiday Hack 2023</a></li>
-                <li><a href="https://blog.kassiopia.dev/?p=27" target="_blank">Ersatz TV Setup Guide</a></li>
-            </ul>
-            <a href="https://blog.kassiopia.dev" target="_blank" class="facenook-blog-link">View all blog posts</a>
-        </div>
-    </div>
-</div>
             <div class="facenook-photos" data-tab-content="photos" style="display:none; padding:16px;">
                 <p>Photo gallery coming soon!</p>
             </div>
@@ -274,25 +273,20 @@ const windowTemplates = {
                 <p>Friends list coming soon!</p>
             </div>
         </div>
-    `,
-    width: '650px',
-    height: '500px'
-},
+        `,
+        width: '650px',
+        height: '500px'
+    },
     aolchat: {
         title: 'Chat Room',
         content: `
-            <div>
+            <div class="chat-container">
                 <iframe src='https://iframe.chat/embed?chat=57665667' id='chattable' frameborder='none'></iframe>
-            </div>
-            <script>
-            chattable.initialize({
-                theme : "Wannabe XP"
-            });
-            </script>          
+            </div>          
         `,
         width: '350px',
         height: '400px'
-    },
+    }
 };
 
 function createOrFocusWindow(windowType) {
@@ -336,6 +330,8 @@ function createOrFocusWindow(windowType) {
         setTimeout(() => initializePinball(windowEl), 0);
     } else if (windowType === 'facenook') {
         setTimeout(() => initializeFacenookTabs(windowEl), 0);
+    } else if (windowType === 'aolchat') {
+        setTimeout(() => initializeChat(windowEl), 0);
     }
     focusWindow(windowEl);
     return windowEl;
@@ -426,6 +422,63 @@ window.closeWindow = function(windowType) {
     }
 }
 
+function focusWindow(windowEl) {
+    // Bring to front
+    document.querySelectorAll('.window').forEach(win => {
+        win.classList.remove('active');
+    });
+    windowEl.classList.add('active');
+    
+    // Update taskbar buttons
+    document.querySelectorAll('.taskbar-button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    const windowType = windowEl.id.replace('window-', '');
+    const taskbarButton = document.querySelector(`#taskbar-${windowType}`);
+    if (taskbarButton) {
+        taskbarButton.classList.add('active');
+    }
+}
+
+function dragElement(element) {
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    const titleBar = element.querySelector('.title-bar');
+    
+    if (titleBar) {
+        titleBar.onmousedown = dragMouseDown;
+    }
+
+    function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // Get the mouse cursor position at startup
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // Call a function whenever the cursor moves
+        document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // Calculate the new cursor position
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // Set the element's new position
+        element.style.top = (element.offsetTop - pos2) + "px";
+        element.style.left = (element.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        // Stop moving when mouse button is released
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+
 function toggleStartMenu() {
     const startMenu = document.getElementById('start-menu');
     startMenu.classList.toggle('visible');
@@ -493,20 +546,6 @@ function initializeVolumeControl() {
         }
     });
 }
-
-// Initialize desktop when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initializeStartMenu();
-    initializeNetworkMenu();
-    initializeVolumeControl();
-    // Add click handlers for desktop icons
-    document.querySelectorAll('.desktop-icon').forEach(icon => {
-        icon.addEventListener('click', () => {
-            const windowType = icon.dataset.window;
-            createOrFocusWindow(windowType);
-        });
-    });
-});
 
 function initializePhotoViewer(windowEl) {
     let currentPhotoIndex = 0;
@@ -600,36 +639,33 @@ function initializePhotoViewer(windowEl) {
         });
     }
 
-    // Add button event listeners
-    windowEl.querySelector('.prev-button').addEventListener('click', () => {
+    function previousPhoto() {
         if (currentPhotoIndex > 0) {
             currentPhotoIndex--;
             displayPhoto(currentPhotoIndex);
         }
-    });
+    }
 
-    windowEl.querySelector('.next-button').addEventListener('click', () => {
+    function nextPhoto() {
         if (currentPhotoIndex < photos.length - 1) {
             currentPhotoIndex++;
             displayPhoto(currentPhotoIndex);
         }
-    });
+    }
 
-    windowEl.querySelector('.view-button').addEventListener('click', toggleView);
-
-    windowEl.querySelector('.zoom-in').addEventListener('click', () => {
+    function zoomIn() {
         if (currentZoom < 3) {
             currentZoom += 0.25;
             currentPhoto.style.transform = `scale(${currentZoom})`;
         }
-    });
+    }
 
-    windowEl.querySelector('.zoom-out').addEventListener('click', () => {
+    function zoomOut() {
         if (currentZoom > 0.5) {
             currentZoom -= 0.25;
             currentPhoto.style.transform = `scale(${currentZoom})`;
         }
-    });
+    }
 
     // Initialize photo viewer
     loadPhotos();
@@ -663,8 +699,33 @@ function initializeFacenookTabs(windowEl) {
     });
 }
 
+function initializeChat(windowEl) {
+    const iframe = windowEl.querySelector('iframe');
+    const container = windowEl.querySelector('.chat-container');
+    container.style.height = '100%';
+    container.style.width = '100%';
+    container.style.overflow = 'hidden';
+    
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = 'none';
+    iframe.addEventListener('load', () => {
+        try {
+            if (typeof chattable !== "undefined") {
+                chattable.initialize({ theme: "Wannabe XP" });
+            }
+        } catch (e) {
+            console.log("Chattable initialization error:", e);
+        }
+    });
+}
+
 // Initialize desktop when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    initializeStartMenu();
+    initializeNetworkMenu();
+    initializeVolumeControl();
+    // Add click handlers for desktop icons
     document.querySelectorAll('.desktop-icon').forEach(icon => {
         icon.addEventListener('click', () => {
             const windowType = icon.dataset.window;
@@ -672,13 +733,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-// Make sure closeWindow is defined globally
-window.closeWindow = function(windowType) {
-    const windowEl = document.querySelector(`#window-${windowType}`);
-    const taskbarButton = document.querySelector(`#taskbar-${windowType}`);
-    if (windowEl) {
-        windowEl.remove();
-        taskbarButton.remove();
-    }
-}
