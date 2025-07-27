@@ -281,17 +281,14 @@ const windowTemplates = {
     aolchat: {
         title: 'Chat Room',
         content: `
-            <div class="aol-chatbox">
-                <div class="aol-chat-header">
-                    <img src="images/aim-buddy.png" alt="AIM Buddy">
-                    Chat Room
-                </div>
-                <div class="aol-chat-messages" id="aol-chat-messages"></div>
-                <div class="aol-chat-input-row">
-                    <input type="text" id="aol-chat-input" placeholder="Type a message..." maxlength="200" />
-                    <button id="aol-chat-send">Send</button>
-                </div>
+            <div>
+                <iframe src='https://iframe.chat/embed?chat=57665667' id='chattable' frameborder='none'></iframe>
             </div>
+            <script>
+            chattable.initialize({
+                theme : "Wannabe XP"
+            });
+            </script>          
         `,
         width: '350px',
         height: '400px'
@@ -337,8 +334,6 @@ function createOrFocusWindow(windowType) {
         setTimeout(() => initializePhotoViewer(windowEl), 0);
     } else if (windowType === 'pinball') {
         setTimeout(() => initializePinball(windowEl), 0);
-    } else if (windowType === 'aolchat') {
-        setTimeout(() => initializeAOLChat(windowEl), 0);
     } else if (windowType === 'facenook') {
         setTimeout(() => initializeFacenookTabs(windowEl), 0);
     }
