@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kittycat.moe: Photos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/photos.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>kittycat.moe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="yapping.html">Yappings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <p>Click a photo to see the full sized version.</p>
+        <div id="photo-viewer" style="display:none;">
+            <span id="close-viewer" style="cursor:pointer;">&times;</span>
+            <img id="full-photo" src="" alt="" />
+            <div id="photo-name"></div>
+        </div>
+        <div id="photo-grid"></div>
+    </div>
+    <footer>
+        <p>© 2025 kittycat.moe</p>
+    </footer>
+</body>
+</html>
