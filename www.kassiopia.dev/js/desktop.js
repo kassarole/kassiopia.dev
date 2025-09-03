@@ -131,6 +131,20 @@ const windowTemplates = {
                         </div>
                     </div>
                     <div class="facenook-post-content">
+                        Trying out a crossposting thing for my little blog areas here and on my other site. I've been hard at work moving stuff from my old docker servers over to kubernetes. I went with 3 optiplex 7050m's since they were a good price on ebay. Somewhat interestingly these machines have vPro chips so I've also had a chance to play with Intel AMT. I should be able to get all my proxy hosts cut over today and then I'll be almost completely on the new cluster. I'm leaving some containers on docker becuase they're more trouble than they're worth but I'll be downsizing from five docker servers to only one or two.
+
+                        I also had the chance to get away for the long weekend last weekend and went up to the Upper Peninsula of Michigan for the first time. I got some new photos and those have been added. I'm hoping to get some more travel booked soon to be able to get some nice fall shots before settling into winter.
+                    </div>
+                </div>
+                <div class="facenook-post">
+                    <div class="facenook-post-header">
+                        <img class="facenook-post-pic" src="images/profile.png" alt="Profile Picture">
+                        <div>
+                            <span class="facenook-post-author">Kassiopia</span>
+                            <span class="facenook-post-date">July 22, 2025</span>
+                        </div>
+                    </div>
+                    <div class="facenook-post-content">
                     I've been hard at work on a handful of new projects. I've started migrating all of my homelab hosts over to NixOS and I think I'll probably write a full blog about the process. I've also been trying to learn PCB design. I built a simple carrier board for an unreleased project that I should hopefully be able to publish soon and, over the past weekend, I designed my first full board. I'm still waiting for the full pricing back on what it'll cost to manufacture. I'd still like to get back to game development but there's only so much time in the day. Fingers crossed I can free up some more time for that soon. I also have a few more ideas for things to add here to this site but I've also been worried this site is starting to become a bit of a pain to navigate. I still enjoy the design but I've been debating moving it to a subdomain and writing a more simple and text focussed site as the main page. Still unsure what's better.
                     </div>
                 </div>
